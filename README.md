@@ -2,4 +2,4 @@
 
 This repository contains code for an interactive information web app, created for the _Client-Side Web Development_ course at the UW iSchool.
 
-Group Mates Kyle Du, James Parrott,
+Group Mates Kyle Du, James Parrott, Logan Dinh 
