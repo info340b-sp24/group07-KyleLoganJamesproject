@@ -1,4 +1,9 @@
 
-h1, h2 {
+h2 {
     color: pink;
+}
+
+p, li {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25em;
 }
