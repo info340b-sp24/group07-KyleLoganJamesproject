@@ -6,6 +6,10 @@ h2 {
     color: pink;
 }
 
+p {
+    margin: .5em;
+}
+
 p, li {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.25em;
@@ -14,4 +18,8 @@ p, li {
 
 body {
     background-color: black;
+}
+
+section {
+    padding: .5em;
 }
