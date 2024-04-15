@@ -12,6 +12,12 @@ img {
     height: 100px;
 }
 
+footer {
+    margin-left: .5rem;
+    color:  #F95573;
+    font-family: 'Roboto', sans-serif;
+}
+
 /*align text to center */
 .textCenter {
     text-align: center;
@@ -45,7 +51,6 @@ img {
 /* makes the CarQueen title bold and centered */
 .comparison-centeredTitle {
     font-weight: bold;
-    position: relative center;
 }
 
 /* method to create the height of the car image for just the comparison page.*/
@@ -118,7 +123,6 @@ the border */
 .comparison-vsImage {
     height: 500px;
     width: 500px;
-    /* margin-right: 1.5rem; */
 }
 
 section {
