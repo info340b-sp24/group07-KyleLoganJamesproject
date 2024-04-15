@@ -14,36 +14,43 @@
 <body>
     
   <main>
-      <h1>
-          <!--Sets the top to be a color red for the team logo, title, and links to pages -->
-          <nav class="navbar" style="background-color: #F95573;"> 
-          <img src="page_images/Lightning_McQueen_logo.gif" alt="CarQueen Logo" >
-          <p class="comparison-centeredTitle "></p>
-          <!-- this is the start for creation of the three features for our web page.-->
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-              <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active fw-bold text-white fs-3 " aria-current="Home Page" href="#">  <a class="fw-bold text-white fs-3"   href="main-index.html">Home</a> &ensp;  </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link fw-bold text-white fs-2" aria-current="Upload Page" href="#">  <a class="fw-bold text-white fs-3"  href="upload-index.html">Upload</a> &ensp;   </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active fw-bold text-white fs-2 " aria-current="Compare Page" href="#">    <a class="fw-bold text-white fs-3"  href="upload-index.html">Compare</a>     </a>
-                    </li>
-                  </ul>
-                </div>
+    <!-- used to represent the top of the page header used to block off the top -->
+    <header class="headerFlex">
+      <!-- displays the logo first in the left corner -->
+      <img src="page_images/Lightning_McQueen_logo.gif" alt="CarQueen Logo">
+
+      <!-- displays title next in the middle -->
+      <h1 class="pageTitle">CarQueen</h1>
+
+      <!--Sets the top to be a color red for the team logo, title, and links to pages -->
+      <nav class="navbar" style="background-color: #F95573;"> 
+        
+        
+        <!-- this is the start for creation of the three features for our web page.-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse socialLinks" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active fw-bold text-white fs-3 " aria-current="Home Page" href="#">  <a class="fw-bold text-white fs-3"   href="main-index.html">Home</a> &ensp;  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold text-white fs-2" aria-current="Upload Page" href="#">  <a class="fw-bold text-white fs-3"  href="upload-index.html">Upload</a> &ensp;   </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active fw-bold text-white fs-2 " aria-current="Compare Page" href="#">    <a class="fw-bold text-white fs-3"  href="upload-index.html">Compare</a>     </a>
+                  </li>
+                </ul>
               </div>
-            </nav>
-          <!--end of the three features html code-->  
+            </div>
           </nav>
-           <!-- start of the card creation for showing all cars.-->
-      </h1>
+        <!--end of the three features html code-->  
+        </nav>
+        <!-- start of the card creation for showing all cars.-->
+    </header>
 
     <!-- div for making the card, logo and card into a flex container -->
     <div class="d-lg-flex">    
