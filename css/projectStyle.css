@@ -20,7 +20,6 @@ img {
 /* method to create the height of the car image.*/
 .increaseCarHeight {
     height: 200px;
-    width: 300px;
 }
 
 /* changes the color of the economy button to green.*/
@@ -44,9 +43,35 @@ img {
 }
 
 /* makes the CarQueen title bold and centered */
-.centered_title {
+.comparison-centeredTitle {
     font-weight: bold;
-    margin-left: 12rem;
+    position: relative center;
+}
+
+/* method to create the height of the car image for just the comparison page.*/
+.comparison-increaseCarHeight {
+    height: 200px;
+    width: 300px;
+}
+
+/* changes the comarpison page car title */
+.comparison-searchCarTitle {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+
+/* makes the search bar on the comparions page a flex box */
+.comparison-searchBar {
+    display: flex;
+}
+
+/* changes the search bars length on the comparison page TODO: make media query for this so that when its smaller it takes up the same length as the
+car card */
+.comparison-col {
+    flex: 0 0 25%; /* This sets the flex-grow, flex-shrink, and flex-basis properties */
+    max-width: 25%; /* This sets the maximum width of the column */
+    flex-basis: 25%; /* This sets the initial main size of the column */
 }
 
 

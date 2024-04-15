@@ -17,8 +17,8 @@
       <h1>
           <!--Sets the top to be a color red for the team logo, title, and links to pages -->
           <nav class="navbar" style="background-color: #F95573;"> 
-          <img src="Lightning_McQueen_logo.gif" alt="CarQueen Logo" >
-          <p class="centered_title">CarQueen</p>
+          <img src="page_images/Lightning_McQueen_logo.gif" alt="CarQueen Logo" >
+          <p class="comparison-centeredTitle ">CarQueen</p>
           <!-- this is the start for creation of the three features for our web page.-->
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
               <div class="container-fluid">
@@ -47,8 +47,9 @@
 
   <!-- this represents the search bar of car 1.-->
   <form>
-    <div class="text-left">
-        <div class="form-group mb-3 col-sm-3">
+    <h2 class="comparison-searchCarTitle ">Car 1</h2>
+    <div class="text-left comparison-searchBar">
+        <div class="form-group mb-3 comparison-col">
             <input type="CarName" class="form-control text-left p-3" aria-describedby="emailHelp" placeholder="Search Vehicle 1">
         </div>
     </div>
@@ -59,12 +60,20 @@
   <!-- card 1-->
   <!--beggining getting the toyota prius information-->
   <div class="card" style="width: 23rem;">
-    <img src="car_images/2024-toyota-prius.png" class="card-img-top increaseCarHeight" alt="an image of a Toyota Prius">
+    <img src="car_images/2024-toyota-prius.png" class="card-img-top comparison-increaseCarHeight" alt="an image of a Toyota Prius">
     <div class="card-body">
+      <!-- update to reflect the actual car searched up later -->
       <h5 class="card-title">Toyota Prius AWD Sedan</h5>
-      <p class="card-text text-black ">An affordable economy car meant for the average consumer wanting a fuel efficient vehicle to get them from point A to B.</p>
-      <button class="economyButtonColor ">Economy</button>
-      <br></br>
+
+      <!-- List for car elements -->
+      <ul class="card-text text-black">
+        <li>Car Category: Hybrid</li>
+        <li>Price: $24,525</li>
+        <li>Miles Per Gallon: 54 MPG </li>
+        <li>Luxury Scale (1-10): 5 </li>
+        <li>Saftey Rating: 3 </li>
+      </ul>
+
       <a href="https://www.toyota.com/prius/" class="btn btn-primary">Official Webpage</a>
     </div>
   </div>
