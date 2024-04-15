@@ -17,9 +17,52 @@ p, li {
 }
 
 body {
-    background-color: black;
+    background-color: white;
 }
+
+/* increases the nav button by height of 150*/
+nav {
+    height: 150px;
+}
+
+/* increases the image by height of 100*/
+img {
+    height: 100px;
+}
+
+/*align text to center */
+.textCenter {
+    text-align: center;
+}
+
+/* method to create the height of the car image.*/
+.increaseCarHeight {
+    height: 200px;
+}
+
+/* changes the color of the economy button to green.*/
+.economyButtonColor {
+    color: white;
+    background-color: #4FEF35;
+}
+
+/*increases the text box */
+.textBox {
+  margin: auto;
+  width: 35%;
+  padding: 10px;
+}
+
+/* changes the button color to red for clear filter*/
+.changeButtonColor {
+    background: red;
+    text-align: center;
+    height: 40px;
+}
+
+
 
 section {
     padding: .5em;
 }
+
