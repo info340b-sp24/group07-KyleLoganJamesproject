@@ -98,8 +98,8 @@ car card */
 /* changes the padding/margin around each card so that they aren't flush against
 the border */
 .comparison-cardMargin {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 /* adds margin to the search form on the comparison page */
