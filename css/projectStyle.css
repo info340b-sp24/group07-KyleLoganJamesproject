@@ -74,6 +74,26 @@ car card */
     flex-basis: 25%; /* This sets the initial main size of the column */
 }
 
+/* changes the padding/margin around each card so that they aren't flush against
+the border */
+.comparison-cardMargin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* makes logo a flex box */
+.comparison-vsFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* styles the VS image on the comparison page */
+.comparison-vsImage {
+    height: 500px;
+    width: 500px;
+
+}
 
 section {
     padding: .5em;

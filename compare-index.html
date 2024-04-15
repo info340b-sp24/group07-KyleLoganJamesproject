@@ -45,40 +45,82 @@
            <!-- start of the card creation for showing all cars.-->
       </h1>
 
-  <!-- this represents the search bar of car 1.-->
-  <form>
-    <h2 class="comparison-searchCarTitle ">Car 1</h2>
-    <div class="text-left comparison-searchBar">
-        <div class="form-group mb-3 comparison-col">
-            <input type="CarName" class="form-control text-left p-3" aria-describedby="emailHelp" placeholder="Search Vehicle 1">
+  <!-- div for making the card, logo and card into a flex container -->
+  <div class="d-lg-flex">    
+    <!-- card 1-->
+    <!--beggining getting the toyota prius information-->
+    <div class="card comparison-cardMargin d-flex flex-column" style="width: 23rem;">
+
+      <!-- this represents the search bar of car 1.-->
+      <form class="comparison-cardMargin d-flex flex-column">
+        <h2 class="comparison-searchCarTitle">Car 1</h2>
+        <div class="text-left comparison-searchBar">
+            <div class="form-group mb-3 comparison-col-3">
+                <input type="CarName" class="form-control text-left p-3" aria-describedby="emailHelp" placeholder="Search Vehicle 1">
+            </div>
         </div>
+      </form>
+
+      <img src="car_images/2024-toyota-prius.png" class="card-img-top comparison-increaseCarHeight" alt="an image of a Toyota Prius">
+      <div class="card-body">
+        <!-- update to reflect the actual car searched up later -->
+        <h5 class="card-title">Toyota Prius AWD Sedan</h5>
+
+        <!-- List for car elements -->
+        <ul class="card-text text-black">
+          <li>Car Category: Hybrid</li>
+          <li>Price: $24,525</li>
+          <li>Miles Per Gallon: 54 MPG </li>
+          <li>Luxury Scale (1-10): 5 </li>
+          <li>Saftey Rating: 3 </li>
+        </ul>
+
+        <a href="https://www.toyota.com/prius/" class="btn btn-primary">Official Webpage</a>
+      </div>
     </div>
-    
-  </form>
-  
 
-  <!-- card 1-->
-  <!--beggining getting the toyota prius information-->
-  <div class="card" style="width: 23rem;">
-    <img src="car_images/2024-toyota-prius.png" class="card-img-top comparison-increaseCarHeight" alt="an image of a Toyota Prius">
-    <div class="card-body">
-      <!-- update to reflect the actual car searched up later -->
-      <h5 class="card-title">Toyota Prius AWD Sedan</h5>
 
-      <!-- List for car elements -->
-      <ul class="card-text text-black">
-        <li>Car Category: Hybrid</li>
-        <li>Price: $24,525</li>
-        <li>Miles Per Gallon: 54 MPG </li>
-        <li>Luxury Scale (1-10): 5 </li>
-        <li>Saftey Rating: 3 </li>
-      </ul>
-
-      <a href="https://www.toyota.com/prius/" class="btn btn-primary">Official Webpage</a>
+    <!-- div for the vs logo in the center of the page -->
+    <div class="comparison-vsFlex flex-item">
+      <img class="comparison-vsImage" src="page_images/vs-versus-text-logo-battle-fight-game-flat-cartoon-symbol_101884-738.avif" alt="Versus Logo">
     </div>
-  </div>
 
-  <!-- need to figure out still how to seperate each car horizontally so each line has diff cars-->
+
+    <!-- card 2-->
+    <!--beggining getting the empty car information-->
+    <div class="card comparison-cardMargin d-flex flex-column" style="width: 23rem;">
+
+      <!-- this represents the search bar of car 2.-->
+      <form class="comparison-cardMargin d-flex flex-column">
+        <h2 class="comparison-searchCarTitle">Car 2</h2>
+        <div class="text-left comparison-searchBar">
+            <div class="form-group mb-3 comparison-col-3">
+                <input type="CarName" class="form-control text-left p-3" aria-describedby="emailHelp" placeholder="Search Vehicle 2">
+            </div>
+        </div>
+      </form>
+
+      <img src="car_images/2024-toyota-prius.png" class="card-img-top comparison-increaseCarHeight" alt="an image of a Toyota Prius">
+      <div class="card-body">
+        <!-- update to reflect the actual car searched up later -->
+        <h5 class="card-title">???</h5>
+
+        <!-- List for car elements -->
+        <ul class="card-text text-black">
+          <li>Car Category: ?</li>
+          <li>Price: ?</li>
+          <li>Miles Per Gallon: ? </li>
+          <li>Luxury Scale (1-10): ? </li>
+          <li>Saftey Rating: ? </li>
+        </ul>
+
+        <!-- update the link after we selected a car -->
+        <a href="" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+
+</div>
+
 </main>
 
 <!-- END OF DOCUMENT BODY -->
