@@ -1,18 +1,86 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Kyle">
-    <meta name="description" content="This page compares two cars within our catalog">
-    <title>CarQueen Comparison</title>
+    
+    <meta name="author" content="Kyle Du">
+    <meta name="description" content="This page contains the comparison feature of this website">
+    <title>Compare Page of CarQueen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> <!-- port over bootstrap library-->
     <link rel="stylesheet" href="css/projectStyle.css">
 </head>
 <body>
     
-    <p>This is an example of what happens when user presses the compare page at top of page</p>
-    <p>click the home page at top to go back to main home page.</p>
+  <main>
+      <h1>
+          <!--Sets the top to be a color red for the team logo, title, and links to pages -->
+          <nav class="navbar" style="background-color: #F95573;"> 
+          <img src="Lightning_McQueen_logo.gif" alt="CarQueen Logo" >
+          <p class="centered_title">CarQueen</p>
+          <!-- this is the start for creation of the three features for our web page.-->
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active fw-bold text-white fs-3 " aria-current="page" href="#">  <a class="fw-bold text-white fs-3"   href="/main-index.html">Home</a> &ensp;  </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fw-bold text-white fs-2" href="#">  <a class="fw-bold text-white fs-3"  href="/upload-index.html">Upload</a> &ensp;   </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active fw-bold text-white fs-2 " aria-current="page" href="#">    <a class="fw-bold text-white fs-3"  href="/upload-index.html">Compare</a>     </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          <!--end of the three features html code-->  
+          </nav>
+           <!-- start of the card creation for showing all cars.-->
+      </h1>
 
-   
+  <!-- getting the user input for specific car name to filter based on their needs.-->
+  <form>
+    <div class="text-center">
+    <div class="form-group mb-3">
+      <input type="CarName" class="form-control text-center p-3" aria-describedby="emailHelp" placeholder="Search Vehicle Name (TYPE AND HIT ENTER)">
+      <small id="emailHelp" class="form-text text-muted">We will use this information to filter based on your input.</small>
+    </div>
+    <!--attempts to clear the search bar-->
+    
+      <button type="button" class="changeButtonColor text-white ">CLEAR FILTER</button>
+    </div>
+    
+  </form>
+  
 
-   
-</body>
+  <!-- card 1-->
+  <!--beggining getting the toyota prius information-->
+  <div class="card" style="width: 18rem;">
+    <img src="car_images/2024-toyota-prius.png" class="card-img-top increaseCarHeight" alt="an image of a Toyota Prius">
+    <div class="card-body">
+      <h5 class="card-title">Toyota Prius AWD Sedan</h5>
+      <p class="card-text text-black ">An affordable economy car meant for the average consumer wanting a fuel efficient vehicle to get them from point A to B.</p>
+      <button class="economyButtonColor ">Economy</button>
+      <br></br>
+      <a href="https://www.toyota.com/prius/" class="btn btn-primary">Official Webpage</a>
+    </div>
+  </div>
+
+  <!-- need to figure out still how to seperate each car horizontally so each line has diff cars-->
+</main>
+
+<!-- END OF DOCUMENT BODY -->
+</body> 
 </html>
+
+
+<!-- this is the link to sign in sheet for google.-->
+<!-- <button class="btn btn-sm btn-outline-secondary" type="button"><a href ="https://accounts.google.com/v3/signin/identifier?hl=en-gb&ifkv=ARZ0qKLBVxiirwdD_JMJIZwbix36Eg5JCcVgmp9aN46ZAzInwgeaXTYI3lfXexj3SnCOIoOkd3AQmw&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-653371563%3A1713121166624389&theme=mn&ddm=0">Sign In</a></button> -->
+            
