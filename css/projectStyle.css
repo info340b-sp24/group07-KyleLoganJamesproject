@@ -134,12 +134,18 @@ car card */
     flex-basis: 25%; /* This sets the initial main size of the column */
 }
 
+.comparison-cardFlex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* changes the padding/margin around each card so that they aren't flush against
 the border */
 .comparison-cardMargin {
-    margin-top: .5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    display: flex;
+    /* margin-top: .5rem;
+    margin-left: 3rem;
+    margin-right: 2rem; */
 }
 
 /* adds margin to the search form on the comparison page */
@@ -150,18 +156,31 @@ the border */
 /* makes logo a flex box */
 .comparison-vsFlex{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; 
 }
 
 /* styles the VS image on the comparison page */
 .comparison-vsImage {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
 }
 
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
+
+    div#navbar {
+        display: none;
+    }
+    
+    div#socialLinks {
+        display: block;
+    }
+    
+}
+
+/* when on a phone screen the hamburger menu will display the links in block form */
+@media (min-width: 786px) {
 
     div#navbar {
         display: none;
