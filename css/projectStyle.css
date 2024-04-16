@@ -29,6 +29,7 @@ footer {
     margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
+    display: flex;
 }
 
 /* makes the header a flex box */
@@ -66,13 +67,6 @@ footer {
 .economyButtonColor {
     color: white;
     background-color: #4FEF35;
-}
-
-/*increases the text box */
-.textBox {
-  margin: auto;
-  width: 35%;
-  padding: 10px;
 }
 
 /* changes the button color to red for clear filter*/
@@ -126,14 +120,7 @@ footer {
     background-color: rebeccapurple; 
 }
 
-/* changes the search bars length on the comparison page TODO: make media query for this so that when its smaller it takes up the same length as the
-car card */
-.comparison-col {
-    flex: 0 0 25%; /* This sets the flex-grow, flex-shrink, and flex-basis properties */
-    max-width: 25%; /* This sets the maximum width of the column */
-    flex-basis: 25%; /* This sets the initial main size of the column */
-}
-
+/* this makes our comparison cards flex boxes and determines their spacing */
 .comparison-cardFlex {
     display: flex;
     justify-content: space-evenly;
@@ -143,9 +130,6 @@ car card */
 the border */
 .comparison-cardMargin {
     display: flex;
-    /* margin-top: .5rem;
-    margin-left: 3rem;
-    margin-right: 2rem; */
 }
 
 /* adds margin to the search form on the comparison page */
@@ -180,7 +164,7 @@ the border */
 }
 
 /* when on a phone screen the hamburger menu will display the links in block form */
-@media (max-width: 786px) {
+@media (max-width: 992px) {
 
     /* allows for the cards to be displayed in a column when the screen is smaller */
     .comparison-cardFlex {
