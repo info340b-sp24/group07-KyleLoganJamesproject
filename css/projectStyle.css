@@ -191,7 +191,7 @@ car card */
 }
 
 /* changes the padding/margin around each card so that they aren't
-flush against
+flush againsts
 the border */
 .comparison-cardMargin {
     display: flex;
