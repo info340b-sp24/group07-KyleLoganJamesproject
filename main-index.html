@@ -18,7 +18,7 @@
           <!--Sets the top to be a color red for the team logo, title, and links to pages -->
           <nav class="navbar" style="background-color: #F95573;"> 
           <img src="page_images/Lightning_McQueen_logo.gif" alt="CarQueen Logo" >
-          <p class="fw-bold text-center">CarQueen</p>
+          <p class="fw-bold ">CarQueen</p>
           <!-- this is the start for creation of the three features for our web page.-->
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
               <div class="container-fluid">
@@ -47,29 +47,243 @@
 
   <!-- getting the user input for specific car name to filter based on their needs.-->
   <form>
-    <div class="text-center">
+    <div class="text-center textBox">
     <div class="form-group mb-3">
-      <input type="CarName" class="form-control text-center p-3" aria-describedby="emailHelp" placeholder="Search Vehicle Name (TYPE AND HIT ENTER)">
-      <small id="emailHelp" class="form-text text-muted">We will use this information to filter based on your input.</small>
+      <input type="CarName" class="form-control text-center p-3" aria-describedby="carFilter" placeholder="Search Vehicle Name (TYPE AND HIT ENTER)">
+      <small  class="form-text text-muted">We will use this information to filter based on your input.</small>
     </div>
     <!--attempts to clear the search bar-->
-    
       <button type="button" class="changeButtonColor text-white ">CLEAR FILTER</button>
     </div>
-    
   </form>
   
 
-  <!-- card 1-->
-  <!--beggining getting the toyota prius information-->
+  <!--wrapping this in a div tag for flex box and aligning 4 per row. Parent will add changes to all children-->
+  <div class="containerHoldCardsColumn">
+    <!-- card 1-->
+   <!--beggining getting the toyota prius information-->
+   <div class="card" style="width: 18rem;">
+     <img src="car_images/2024-toyota-prius.png" class="card-img-top increaseCarHeight" alt="an image of a Toyota Prius">
+     <div class="card-body">
+       <h5 class="card-title">2024 Toyota Prius AWD Sedan</h5>
+       <p class="card-text text-black ">An affordable economy car meant for the average consumer wanting a fuel efficient vehicle to get them from point A to B.</p>
+       <button class="economyButtonColor ">Economy</button>
+       <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+       <a target="_blank" href="https://www.toyota.com/prius/ " class="btn btn-primary">Official Webpage</a>
+     </div>
+   </div>
+
+   <!--card 2-->
+   <!-- Honda civic card-->
+   <div class="card" style="width: 18rem;">
+     <img src="car_images/2024_Honda_Civic.png" class="card-img-top increaseCarHeight" alt="an image of a honda civic">
+     <div class="card-body">
+       <h5 class="card-title">2024 Honda Civic</h5>
+       <p class="card-text text-black ">An affordable and sporty economy vehicle meant for point A to B with slight excitement while still bringing good gas milage</p>
+       <button class="economyButtonColor ">Economy</button>
+       <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+       <a target="_blank" href="https://automobiles.honda.com/civic" class="btn btn-primary">Official Webpage</a>
+     </div>
+   </div>
+
+  <!--card 3-->
+  <!-- Volkswagen Jetta-->
   <div class="card" style="width: 18rem;">
-    <img src="car_images/2024-toyota-prius.png" class="card-img-top increaseCarHeight" alt="an image of a Toyota Prius">
+    <img src="car_images/2022_volkswagen_jetta.png" class="card-img-top increaseCarHeight" alt="an image of a Volkswagen Jetta">
     <div class="card-body">
-      <h5 class="card-title">Toyota Prius AWD Sedan</h5>
-      <p class="card-text text-black ">An affordable economy car meant for the average consumer wanting a fuel efficient vehicle to get them from point A to B.</p>
+      <h5 class="card-title">2024 Volkswagen Jetta</h5>
+      <p class="card-text text-black "><b>James's dream car! </b> An affordable economy vehicle that offers both practicality with slight German luxury.</p>
       <button class="economyButtonColor ">Economy</button>
-      <br></br>
-      <a href="https://www.toyota.com/prius/" class="btn btn-primary">Official Webpage</a>
+      <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+      <a target="_blank" href="https://www.vw.com/en/models/jetta.html" class="btn btn-primary">Official Webpage</a>
+    </div>
+  </div>
+
+  <!--card 4-->
+  <!--Nissan Versa-->
+  <div class="card" style="width: 18rem;">
+    <img src="car_images/2024-nissan-versa.png" class="card-img-top increaseCarHeight" alt="an image of a Nissan Versa">
+    <div class="card-body">
+      <h5 class="card-title">2024 Nissan Versa</h5>
+      <p class="card-text text-black ">An extremely affordable economy vehicle that is compact for primary city commuters.</p>
+      <button class="economyButtonColor ">Economy</button>
+      <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+      <a target="_blank" href="https://www.nissanusa.com/vehicles/cars/versa-sedan.html" class="btn btn-primary">Official Webpage</a>
+    </div>
+  </div>
+ </div> <!-- end of parent class container column -->
+
+  <!-- start of the sports car row with 4 sport car cards.-->
+  <div class="containerHoldCardsColumn">
+    <!--card 5-->
+    <!--BMW m3 Competition-->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2021-bmw-m3-competition-04.webp" class="card-img-top increaseCarHeight" alt="an image of a BMW m3 competition">
+      <div class="card-body">
+        <h5 class="card-title">2024 BMW M3 Competition xDrive</h5>
+        <p class="card-text text-black">An extremely fast sports sedan engineered for the track and road generating 503 beautiful German horsepower. </p>
+        <button class="sportButtonColor">Sport</button>
+        <button class="sportButtonColorSound"> <a  target="_blank" href="https://www.youtube.com/watch?v=O89GPMfQzRw">Sound Clip</a></button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.bmwusa.com/vehicles/m-models/m3-sedan/overview.html" class="btn btn-primary">Official Webpage</a>
+        
+      </div>
+    </div>
+
+    <!--card 6-->
+    <!--Chevy Corvette C8-->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2023-chevy-corvette-z06.png" class="card-img-top increaseCarHeight" alt="an image of a c8 z06 Corvette">
+      <div class="card-body">
+        <h5 class="card-title">2024 Chevy Corvette ZO6 RWD</h5>
+        <p class="card-text text-black"><b>Logan's dream car! </b>An extremely fast and sexy sports car engineered for the track creating an eye watering 670 beautiful American Horsepower.</p>
+        <button class="sportButtonColor">Sport</button>
+        <button class="sportButtonColorSound"> <a target="_blank" href="https://www.youtube.com/watch?v=F7eXeb_cd7o">Sound Clip</a></button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.chevrolet.com/performance/corvette/z06" class="btn btn-primary">Official Webpage</a>
+        
+      </div>
+    </div>
+
+    <!--card 7-->
+    <!--Acura tlx type S-->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2024_acura_tlx_sedan_type-s.png" class="card-img-top increaseCarHeight" alt="an image of a Acura tlx type S">
+      <div class="card-body">
+        <h5 class="card-title">2024 Acura TLX Type-S SH-AWD</h5>
+        <p class="card-text text-black">An incredible Japanese sports car created for both as a track and daily commuter generating 355HP. </p>
+        <button class="sportButtonColor">Sport</button>
+        <button class="sportButtonColorSound"> <a target="_blank" href="https://www.youtube.com/watch?v=dFxoJaJTUqM">Sound Clip</a></button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.acura.com/cars/tlx/features?tab=type-s" class="btn btn-primary">Official Webpage</a>
+        
+      </div>
+    </div>
+
+    <!--card 8-->
+    <!--Porsche 911 GT3 -->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2023_porsche_911_coupe_gt3.png" class="card-img-top increaseCarHeight" alt="an image of a Porsche 911 GT3">
+      <div class="card-body">
+        <h5 class="card-title">2024 Porsche 911 GT3</h5>
+        <p class="card-text text-black">An incredibly perfected sports coupe generating 502hp.</p>
+        <button class="sportButtonColor">Sport</button>
+        <button class="sportButtonColorSound"> <a target="_blank" href="https://www.youtube.com/watch?v=AF0rfhk3kO4">Sound Clip</a></button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.porsche.com/usa/models/911/911-gt3-models/911-gt3-touring/" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- start of the SUV row with 4 SUVs.-->
+  <!--wrapping this in a div tag for flex box and aligning 4 per row. Parent will add changes to all children-->
+  <div class="containerHoldCardsColumn">
+    <!--card 9-->
+    <!--Toyota Highlander -->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2025_highlander-hybrid.png" class="card-img-top increaseCarHeight" alt="an image of a toyota highlander">
+      <div class="card-body">
+        <h5 class="card-title">2024 Toyota Highlander AWD</h5>
+        <p class="card-text text-black"><b>Kyle's dream car! </b>A great soccer mom vehicle meant to transport you and 6 other passangers from point A to B reliably.</p>
+        <button class="suvButtonColor">SUV</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.toyota.com/highlander/?srchid=SEM:700000001483645:GOOGLE:71700000085871253:58700007281754421:p65368582864:642339970305&gclsrc=aw.ds&gad_source=1&gclid=EAIaIQobChMIz6jGzYHGhQMVkCCtBh2HNg2OEAAYASAAEgKCGvD_BwE&gclsrc=aw.ds" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+  
+    <!--card 10-->
+    <!--Mercedes GLE -->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/mercedes-gle.png" class="card-img-top increaseCarHeight" alt="an image of a Mercedes GLE">
+      <div class="card-body">
+        <h5 class="card-title">2024 Mercedes GLE-450 4MATIC</h5>
+        <p class="card-text text-black">An amazing family SUV that balances both comfort and extreme levels of German luxury that seats 5 passangers. </p>
+        <button class="suvButtonColor">SUV</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.mbusa.com/en/vehicles/class/gle/suv?sd_campaign_type=Search&sd_digadprov=Resolution&sd_campaign=Corporate_Google_Brand_ICE&sd_channel=GOOGLE&sd_adid=ICE_SUV_GLE&sd_digadkeyword=mercedes+gle&gad_source=1&gclid=EAIaIQobChMI-PCY9YLGhQMVqgitBh18QQawEAAYASAAEgL8RvD_BwE&gclsrc=aw.ds" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+
+    <!--card 11-->
+    <!--Lexus RX 350 -->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2023_lexus_rx-350.png" class="card-img-top increaseCarHeight" alt="an image of a Lexus RX350">
+      <div class="card-body">
+        <h5 class="card-title">2024 Lexus RX350 AWD</h5>
+        <p class="card-text text-black">A great and luxurious Japanese quality SUV that seats 5 passangers while also being reliable. </p>
+        <button class="suvButtonColor">SUV</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.lexus.com/models/RX" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+
+    <!--card 12-->
+    <!--Cadillac escalade -->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/escalade_2024.png" class="card-img-top increaseCarHeight" alt="an image of a cadillac escalade">
+      <div class="card-body">
+        <h5 class="card-title">2024 Cadillac Escalade</h5>
+        <p class="card-text text-black">A true family hauler that can easily carry your 6 other spawns comfortably and in luxury. </p>
+        <button class="suvButtonColor">SUV</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.cadillac.com/suvs/escalade" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- start of the truck row with 4 trucks.-->
+  <!--wrapping this in a div tag for flex box and aligning 4 per row. Parent will add changes to all children-->
+  <div class="containerHoldCardsColumn">
+    <!--card 13-->
+    <!--GMC Denali Ultimate Sierra 1500 -->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2024-sierra.png" class="card-img-top increaseCarHeight" alt="an image of a GMC Denali Ultimate Sierra 1500">
+      <div class="card-body">
+        <h5 class="card-title">2024 GMC Sierra Denali Ultimate 4x4</h5>
+        <p class="card-text text-black">The ultimate truck that balances luxury features while also being a practical truck. </p>
+        <button class="truckButtonColor">Truck</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.gmc.com/trucks/sierra/1500/denali" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+
+    <!--card 14-->
+    <!--A ford f-150 truck with tremor package-->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2023-f-150-tremor.png" class="card-img-top increaseCarHeight" alt="an image of A ford f-150 truck with tremor package">
+      <div class="card-body">
+        <h5 class="card-title">2024 Ford F-150 Tremor 4x4</h5>
+        <p class="card-text text-black">A great truck that balances both on and off road drivability. </p>
+        <button class="truckButtonColor">Truck</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.ford.com/trucks/f150/models/f150-tremor/" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+
+    <!--card 15-->
+    <!--A Toyota Tacoma-->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/toyota-tacoma.png" class="card-img-top increaseCarHeight" alt="an image of A Toyota Tacoma">
+      <div class="card-body">
+        <h5 class="card-title">2024 Toyota Tacoma SR5 4x4</h5>
+        <p class="card-text text-black">One of the most popular mid-sized truck that balances reliability and durability into one package. </p>
+        <button class="truckButtonColor">Truck</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.toyota.com/tacoma/" class="btn btn-primary">Official Webpage</a>
+      </div>
+    </div>
+
+    <!--card 16-->
+    <!--Ram 1500 limited -->
+    <div class="card" style="width: 18rem;">
+      <img src="car_images/2024-ram-1500-limited.png" class="card-img-top increaseCarHeight" alt="Ram 1500 limited">
+      <div class="card-body">
+        <h5 class="card-title">2024 Ram 1500 Limited 4x4</h5>
+        <p class="card-text text-black">An alternative to other American trucks with a great balance of power and luxury. </p>
+        <button class="truckButtonColor">Truck</button>
+        <button class="moreInformationButtonColor"><a target="_blank"  href="moreInformation-index.html">More Info!</a> </button>
+        <a target="_blank" href="https://www.ramtrucks.com/ram-1500/specs.limited.html" class="btn btn-primary">Official Webpage</a>
+      </div>
     </div>
   </div>
 
@@ -77,6 +291,13 @@
 </main>
 <!-- END OF DOCUMENT BODY -->
 </body> 
+
+
+
+<footer class="footer">
+  <p>©2024 CarQueen 340</p>
+</footer>
+
 </html>
 
 
