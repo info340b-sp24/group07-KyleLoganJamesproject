@@ -192,7 +192,8 @@ car card */
     flex-wrap: wrap;
 }
 
-/* changes the padding/margin around each card so that they aren't flush against
+/* changes the padding/margin around each card so that they aren't
+flush against
 the border */
 .comparison-cardMargin {
     display: flex;
