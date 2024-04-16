@@ -1,11 +1,14 @@
+/* updates background color */
 body {
     background-color: white;
 }
 
+/* added background color for the header section */
 header {
     background-color: #F95573;
 }
 
+/* added styling for the header text */
 h1 {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
@@ -21,14 +24,11 @@ img {
     height: 100px;
 }
 
+/* added footer and footer styling */
 footer {
     margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
-}
-
-section {
-    padding: .5em;
 }
 
 /* makes the header a flex box */
@@ -182,17 +182,10 @@ the border */
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (max-width: 786px) {
 
+    /* allows for the cards to be displayed in a column when the screen is smaller */
     .comparison-cardFlex {
         display: flex;
         flex-direction: column;
-    }
-
-    div#navbar {
-        display: none;
-    }
-    
-    div#socialLinks {
-        display: block;
     }
     
 }
