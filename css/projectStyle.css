@@ -180,7 +180,12 @@ the border */
 }
 
 /* when on a phone screen the hamburger menu will display the links in block form */
-@media (min-width: 786px) {
+@media (max-width: 786px) {
+
+    .comparison-cardFlex {
+        display: flex;
+        flex-direction: column;
+    }
 
     div#navbar {
         display: none;
