@@ -1,11 +1,14 @@
+/* updates background color */
 body {
     background-color: white;
 }
 
+/* added background color for the header section */
 header {
     background-color: #F95573;
 }
 
+/* added styling for the header text */
 h1 {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
@@ -21,14 +24,11 @@ img {
     height: 100px;
 }
 
+/* added footer and footer styling */
 footer {
     margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
-}
-
-section {
-    padding: .5em;
 }
 
 /* makes the header a flex box */
@@ -134,12 +134,18 @@ car card */
     flex-basis: 25%; /* This sets the initial main size of the column */
 }
 
+.comparison-cardFlex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* changes the padding/margin around each card so that they aren't flush against
 the border */
 .comparison-cardMargin {
-    margin-top: .5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    display: flex;
+    /* margin-top: .5rem;
+    margin-left: 3rem;
+    margin-right: 2rem; */
 }
 
 /* adds margin to the search form on the comparison page */
@@ -150,14 +156,14 @@ the border */
 /* makes logo a flex box */
 .comparison-vsFlex{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; 
 }
 
 /* styles the VS image on the comparison page */
 .comparison-vsImage {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
 }
 
 /* when on a phone screen the hamburger menu will display the links in block form */
@@ -169,6 +175,17 @@ the border */
     
     div#socialLinks {
         display: block;
+    }
+    
+}
+
+/* when on a phone screen the hamburger menu will display the links in block form */
+@media (max-width: 786px) {
+
+    /* allows for the cards to be displayed in a column when the screen is smaller */
+    .comparison-cardFlex {
+        display: flex;
+        flex-direction: column;
     }
     
 }
