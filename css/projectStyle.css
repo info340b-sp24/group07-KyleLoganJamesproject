@@ -44,11 +44,14 @@ img {
 /* added footer and footer styling and places it at the bottom*/
 .footerStyling {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     margin-right: 1rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
+    margin-top: auto;
+    min-height: 10vh;
 }
 
 /* makes the header a flex box */
