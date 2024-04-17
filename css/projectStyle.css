@@ -8,6 +8,23 @@ header {
     background-color: #F95573;
 }
 
+/* centers the text box for the search vehicle name*/
+.textBoxCenter {
+    display: flex;
+    justify-content: center;
+}
+
+/* centeres the cards 4 across per column */
+.containerHoldCardsColumn {
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 25%; 
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 1em;
+}
+
 /* added styling for the header text */
 h1 {
     font-weight: bold;
@@ -24,12 +41,17 @@ img {
     height: 100px;
 }
 
-/* added footer and footer styling */
-footer {
-    margin-left: .5rem;
+/* added footer and footer styling and places it at the bottom*/
+.footerStyling {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 1rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
-    display: flex;
+    margin-top: auto;
+    min-height: 10vh;
 }
 
 /* makes the header a flex box */
@@ -37,7 +59,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 10px;  */
 }
 
 /* makes the nav bar a flex box and align the items within it */
@@ -69,11 +90,49 @@ footer {
     background-color: #4FEF35;
 }
 
+/*changes the color of the sport button to red */
+.sportButtonColor {
+    color: white;
+    background-color: red;
+}
+
+/* changes the color of the sound clip button*/
+.sportButtonColorSound {
+    color: white;
+    background-color: #BDE3FF;
+}
+
+/* changes the color of the SUV button to purple  */
+.suvButtonColor {
+    color: white;
+    background-color: rgb(66, 66, 241);
+}
+
+/* changes the color of the SUV button to purple  */
+.truckButtonColor {
+    color: white;
+    background-color: rgb(190, 190, 3);
+}
+
+/*increases the text box */
+.textBox {
+  margin: auto;
+  width: 35%;
+  padding: 10px;
+}
+
 /* changes the button color to red for clear filter*/
 .changeButtonColor {
     background: red;
     text-align: center;
     height: 40px;
+}
+
+/* changes the More information button to color red like header */
+.moreInformationButtonColor {
+    background: #F95573;
+    color: white; 
+    margin-bottom: 1em;
 }
 
 /* makes the CarQueen title bold and centered */
@@ -120,17 +179,27 @@ footer {
     background-color: rebeccapurple; 
 }
 
-/* this makes our comparison cards flex boxes and determines their spacing */
-.comparison-cardFlex {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+/* changes the search bars length on the comparison page TODO: make media query for this so that when its smaller it takes up the same length as the
+car card */
+.comparison-col {
+    flex: 0 0 25%; /* This sets the flex-grow, flex-shrink, and flex-basis properties */
+    max-width: 25%; /* This sets the maximum width of the column */
+    flex-basis: 25%; /* This sets the initial main size of the column */
 }
 
-/* changes the padding/margin around each card so that they aren't flush against
+.comparison-cardFlex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* changes the padding/margin around each card so that they aren't
+flush againsts
 the border */
 .comparison-cardMargin {
     display: flex;
+    /* margin-top: .5rem;
+    margin-left: 3rem;
+    margin-right: 2rem; */
 }
 
 /* adds margin to the search form on the comparison page */
@@ -163,4 +232,6 @@ the border */
     }
     
 }
+
+
 
