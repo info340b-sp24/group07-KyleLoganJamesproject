@@ -5,9 +5,12 @@ body {
 
 /* added background color for the header section */
 header {
+    height: 150px;
     background-color: #F95573;
 }
 
+
+/* hides header when screen is small */
 /* centers the text box for the search vehicle name*/
 .textBoxCenter {
     display: flex;
@@ -30,13 +33,14 @@ header {
 
 /* added styling for the header text */
 h1 {
-    font-weight: bold;
-    font-family: Helvetica, sans-serif;
+    display: none;
 }
 
 /* increases the nav button by height of 150*/
 nav {
-    height: 150px;
+    display: flex;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
 }
 
 /* increases the image by height of 100*/
@@ -44,17 +48,11 @@ img {
     height: 100px;
 }
 
-/* added footer and footer styling and places it at the bottom*/
-.footerStyling {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-right: 1rem;
+/* added footer and footer styling */
+footer {
+    margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
-    margin-top: auto;
-    min-height: 10vh;
 }
 
 /* makes the header a flex box */
@@ -62,6 +60,20 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* this moves the nav bar a little to the right */
+.nav-container {
+    margin-left: auto;
+}
+
+/* this makes the list elements stack and styles them */
+.nav-items li {
+    /* display: inline-block; */
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    list-style: none;
 }
 
 /* makes the nav bar a flex box and align the items within it */
@@ -72,7 +84,7 @@ img {
 
 /* makes the pages title centered */
 .pageTitle {
-    margin: 0;
+    margin-top: 1rem;
     justify-content: center;
     align-items: center;
 }
@@ -95,30 +107,6 @@ img {
     background-color: #4FEF35;
 }
 
-/*changes the color of the sport button to red */
-.sportButtonColor {
-    color: white;
-    background-color: red;
-}
-
-/* changes the color of the sound clip button*/
-.sportButtonColorSound {
-    color: white;
-    background-color: #BDE3FF;
-}
-
-/* changes the color of the SUV button to purple  */
-.suvButtonColor {
-    color: white;
-    background-color: rgb(66, 66, 241);
-}
-
-/* changes the color of the SUV button to purple  */
-.truckButtonColor {
-    color: white;
-    background-color: rgb(190, 190, 3);
-}
-
 /*increases the text box */
 .textBox {
   margin: auto;
@@ -131,13 +119,6 @@ img {
     background: red;
     text-align: center;
     height: 40px;
-}
-
-/* changes the More information button to color red like header */
-.moreInformationButtonColor {
-    background: #F95573;
-    color: white; 
-    margin-bottom: 1em;
 }
 
 /* makes the CarQueen title bold and centered */
@@ -195,16 +176,13 @@ car card */
 .comparison-cardFlex {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-/* changes the padding/margin around each card so that they aren't
-flush againsts
+/* changes the padding/margin around each card so that they aren't flush against
 the border */
 .comparison-cardMargin {
     display: flex;
-    /* margin-top: .5rem;
-    margin-left: 3rem;
-    margin-right: 2rem; */
 }
 
 /* adds margin to the search form on the comparison page */
@@ -225,20 +203,47 @@ the border */
     width: 400px;
 }
 
+/* hides the phone links when screen is small */
+div#page-links {
+    display: none;
+}
+
+/* styles the hamburger menu */
+div#hamburger-menu {
+    text-align: center;
+    padding: 1em;
+    cursor: pointer;
+}
+
+/* changes hamburger menu color and size */
+#hamburger-menu i {
+    text-align: center;
+    font-size: 24px;
+    color: white; /* Default color for the hamburger icon */
+}  
+
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
 
-    div#navbar {
+    /* hides the hamburger menu when screen is bigger than phone */
+    div#hamburger-menu {
         display: none;
     }
     
-    div#socialLinks {
+    /* display links when screen is bigger than phone */
+    div#page-links {
         display: block;
     }
-    
+
+    /* added styling for the header text when screen is big */
+    h1 {
+        display: block;
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+    }
+
+
 }
-
-
 
 
 
