@@ -189,8 +189,7 @@ car card */
 
 .comparison-cardFlex {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /* changes the padding/margin around each card so that they aren't
