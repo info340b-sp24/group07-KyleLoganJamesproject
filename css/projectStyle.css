@@ -180,17 +180,34 @@ the border */
     width: 400px;
 }
 
+/* hides the phone links when screen is small */
 div#page-links {
     display: none;
 }
 
+/* styles the hamburger menu */
+div#hamburger-menu {
+    text-align: center;
+    padding: 1em;
+    cursor: pointer;
+}
+
+/* changes hamburger menu color and size */
+#hamburger-menu i {
+    text-align: center;
+    font-size: 24px;
+    color: white; /* Default color for the hamburger icon */
+}  
+
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
 
+    /* hides the hamburger menu when screen is bigger than phone */
     div#hamburger-menu {
         display: none;
     }
     
+    /* display links when screen is bigger than phone */
     div#page-links {
         display: block;
     }
