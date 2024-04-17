@@ -9,10 +9,9 @@ header {
     background-color: #F95573;
 }
 
-/* added styling for the header text */
+/* hides header when screen is small */
 h1 {
-    font-weight: bold;
-    font-family: Helvetica, sans-serif;
+    display: none;
 }
 
 /* increases the nav button by height of 150*/
@@ -211,6 +210,14 @@ div#hamburger-menu {
     div#page-links {
         display: block;
     }
+
+    /* added styling for the header text when screen is big */
+    h1 {
+        display: block;
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+    }
+
 
 }
 
