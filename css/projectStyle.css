@@ -180,6 +180,10 @@ the border */
     width: 400px;
 }
 
+div#page-links {
+    display: none;
+}
+
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
 
@@ -187,10 +191,9 @@ the border */
         display: none;
     }
     
-    div#nav-container{
+    div#page-links {
         display: block;
     }
 
 }
-
 
