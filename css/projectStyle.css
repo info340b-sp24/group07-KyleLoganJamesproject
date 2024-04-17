@@ -1,34 +1,15 @@
 /* updates background color */
 body {
     background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* added background color for the header section */
 header {
     height: 150px;
     background-color: #F95573;
-}
-
-
-/* hides header when screen is small */
-/* centers the text box for the search vehicle name*/
-.textBoxCenter {
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-/* centeres the cards 4 across per column */
-.containerHoldCardsColumn {
-    padding-top: 1em;
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 25%; 
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin: 1em;
 }
 
 /* added styling for the header text */
@@ -39,8 +20,8 @@ h1 {
 /* increases the nav button by height of 150*/
 nav {
     display: flex;
-    justify-content: center; /* Center contents horizontally */
-    align-items: center; /* Center contents vertically */
+    justify-content: center;
+    align-items: center; 
 }
 
 /* increases the image by height of 100*/
@@ -50,9 +31,31 @@ img {
 
 /* added footer and footer styling */
 footer {
+    margin-top: auto;
     margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+/* hides header when screen is small */
+/* centers the text box for the search vehicle name*/
+.textBoxCenter {
+    display: flex;
+    justify-content: center;
+}
+
+/* centeres the cards 4 across per column */
+.containerHoldCardsColumn {
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 25%; 
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 1em;
 }
 
 /* makes the header a flex box */
@@ -168,11 +171,12 @@ footer {
 /* changes the search bars length on the comparison page TODO: make media query for this so that when its smaller it takes up the same length as the
 car card */
 .comparison-col {
-    flex: 0 0 25%; /* This sets the flex-grow, flex-shrink, and flex-basis properties */
-    max-width: 25%; /* This sets the maximum width of the column */
-    flex-basis: 25%; /* This sets the initial main size of the column */
+    flex: 0 0 25%;
+    max-width: 25%;
+    flex-basis: 25%; 
 }
 
+/* makes the comparison card a flex box */
 .comparison-cardFlex {
     display: flex;
     justify-content: space-evenly;
@@ -183,7 +187,7 @@ car card */
 the border */
 .comparison-cardMargin {
     display: flex;
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; not sure if this is needed */
     margin-top: 1.5rem;
 }
 
@@ -243,6 +247,61 @@ div#hamburger-menu {
         font-weight: bold;
         font-family: Helvetica, sans-serif;
     }
+}
+
+/* Style for very large screens  */
+@media (min-width: 1800px) {
+
+    button.searchButtonSize {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    /* makes list element font size bigger */
+    div.d-lg-flex li {
+        font-size: 1.5rem;
+    }
+
+    /* makes header containing car name bigger */
+    h5.card-title {
+        font-size: 2.25rem;
+    }
+    
+    /* Styles the button so that they are a little bigger  */
+    .form-group.mb-3.comparison-col-3 button {
+        width: 300px; 
+        height: 50px;
+        padding: 8px;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        margin-left: 4rem;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    /* makes the car photos bigger on big screens */
+    .comparison-increaseCarHeight {
+        height: 300px;
+        width: 400px;
+    }
+
+    /* makes the comparison image bigger on big screens */
+    .comparison-vsImage {
+        height: 600px;
+        width: 600px;
+    }
+
+    /* changes the comarpison page car title */
+    .comparison-searchCarTitle {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 3.25rem;
+    }
+    
 
 
 }
