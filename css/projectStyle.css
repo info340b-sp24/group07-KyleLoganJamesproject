@@ -1,6 +1,9 @@
 /* updates background color */
 body {
     background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* added background color for the header section */
@@ -28,9 +31,13 @@ img {
 
 /* added footer and footer styling */
 footer {
+    margin-top: auto;
     margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
 
 /* hides header when screen is small */
@@ -174,7 +181,6 @@ car card */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-left: 1rem;
 }
 
 /* changes the padding/margin around each card so that they aren't flush against
