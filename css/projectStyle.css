@@ -41,12 +41,14 @@ img {
     height: 100px;
 }
 
-/* added footer and footer styling */
-footer {
-    margin-left: .5rem;
+/* added footer and footer styling and places it at the bottom*/
+.footerStyling {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 1rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
-    display: flex;
 }
 
 /* makes the header a flex box */
@@ -54,7 +56,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 10px;  */
 }
 
 /* makes the nav bar a flex box and align the items within it */
@@ -122,16 +123,13 @@ footer {
     background: red;
     text-align: center;
     height: 40px;
-    
 }
 
 /* changes the More information button to color red like header */
 .moreInformationButtonColor {
     background: #F95573;
     color: white; 
-    /*add spacing 
-     */
-     margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 /* makes the CarQueen title bold and centered */
