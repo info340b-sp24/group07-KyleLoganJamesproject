@@ -8,23 +8,6 @@ header {
     background-color: #F95573;
 }
 
-/* centers the text box for the search vehicle name*/
-.textBoxCenter {
-    display: flex;
-    justify-content: center;
-}
-
-/* centeres the cards 4 across per column */
-.containerHoldCardsColumn {
-    padding-top: 1em;
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 25%; 
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin: 1em;
-}
-
 /* added styling for the header text */
 h1 {
     font-weight: bold;
@@ -41,17 +24,11 @@ img {
     height: 100px;
 }
 
-/* added footer and footer styling and places it at the bottom*/
-.footerStyling {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-right: 1rem;
+/* added footer and footer styling */
+footer {
+    margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
-    margin-top: auto;
-    min-height: 10vh;
 }
 
 /* makes the header a flex box */
@@ -59,6 +36,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* padding: 10px;  */
 }
 
 /* makes the nav bar a flex box and align the items within it */
@@ -90,30 +68,6 @@ img {
     background-color: #4FEF35;
 }
 
-/*changes the color of the sport button to red */
-.sportButtonColor {
-    color: white;
-    background-color: red;
-}
-
-/* changes the color of the sound clip button*/
-.sportButtonColorSound {
-    color: white;
-    background-color: #BDE3FF;
-}
-
-/* changes the color of the SUV button to purple  */
-.suvButtonColor {
-    color: white;
-    background-color: rgb(66, 66, 241);
-}
-
-/* changes the color of the SUV button to purple  */
-.truckButtonColor {
-    color: white;
-    background-color: rgb(190, 190, 3);
-}
-
 /*increases the text box */
 .textBox {
   margin: auto;
@@ -126,13 +80,6 @@ img {
     background: red;
     text-align: center;
     height: 40px;
-}
-
-/* changes the More information button to color red like header */
-.moreInformationButtonColor {
-    background: #F95573;
-    color: white; 
-    margin-bottom: 1em;
 }
 
 /* makes the CarQueen title bold and centered */
@@ -192,8 +139,7 @@ car card */
     justify-content: space-evenly;
 }
 
-/* changes the padding/margin around each card so that they aren't
-flush againsts
+/* changes the padding/margin around each card so that they aren't flush against
 the border */
 .comparison-cardMargin {
     display: flex;
@@ -233,5 +179,14 @@ the border */
     
 }
 
+/* when on a phone screen the hamburger menu will display the links in block form */
+@media (max-width: 786px) {
 
+    /* allows for the cards to be displayed in a column when the screen is smaller */
+    .comparison-cardFlex {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
 
