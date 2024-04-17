@@ -9,7 +9,29 @@ header {
     background-color: #F95573;
 }
 
+
 /* hides header when screen is small */
+/* centers the text box for the search vehicle name*/
+.textBoxCenter {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* centeres the cards 4 across per column */
+.containerHoldCardsColumn {
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 25%; 
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 1em;
+}
+
+/* added styling for the header text */
 h1 {
     display: none;
 }
@@ -70,6 +92,8 @@ footer {
 /*align text to center */
 .textCenter {
     text-align: center;
+    display: flex;
+    
 }
 
 /* method to create the height of the car image.*/
@@ -220,4 +244,6 @@ div#hamburger-menu {
 
 
 }
+
+
 
