@@ -17,9 +17,6 @@ header {
     justify-content: center;
 }
 
-
-
-
 /* centeres the cards 4 across per column */
 .containerHoldCardsColumn {
     padding-top: 1em;
@@ -168,11 +165,12 @@ footer {
 /* changes the search bars length on the comparison page TODO: make media query for this so that when its smaller it takes up the same length as the
 car card */
 .comparison-col {
-    flex: 0 0 25%; /* This sets the flex-grow, flex-shrink, and flex-basis properties */
-    max-width: 25%; /* This sets the maximum width of the column */
-    flex-basis: 25%; /* This sets the initial main size of the column */
+    flex: 0 0 25%;
+    max-width: 25%;
+    flex-basis: 25%; 
 }
 
+/* makes the comparison card a flex box */
 .comparison-cardFlex {
     display: flex;
     justify-content: space-evenly;
@@ -244,6 +242,40 @@ div#hamburger-menu {
         font-weight: bold;
         font-family: Helvetica, sans-serif;
     }
+}
+
+/* Style for very large screens  */
+@media (min-width: 1800px) {
+
+    /* makes list element font size bigger */
+    div.d-lg-flex li {
+        font-size: 1.5rem;
+    }
+
+    /* makes header containing car name bigger */
+    h5.card-title {
+        font-size: 2.25rem;
+    }
+
+    /* makes the car photos bigger on big screens */
+    .comparison-increaseCarHeight {
+        height: 300px;
+        width: 400px;
+    }
+
+    /* makes the comparison image bigger on big screens */
+    .comparison-vsImage {
+        height: 600px;
+        width: 600px;
+    }
+
+    /* changes the comarpison page car title */
+    .comparison-searchCarTitle {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 3.25rem;
+    }
+    
 
 
 }
