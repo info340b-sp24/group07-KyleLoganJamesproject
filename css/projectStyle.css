@@ -144,9 +144,6 @@ car card */
 the border */
 .comparison-cardMargin {
     display: flex;
-    /* margin-top: .5rem;
-    margin-left: 3rem;
-    margin-right: 2rem; */
 }
 
 /* adds margin to the search form on the comparison page */
@@ -177,7 +174,7 @@ the border */
     div#socialLinks {
         display: block;
     }
-    
+
 }
 
 
