@@ -9,25 +9,6 @@ header {
     background-color: #F95573;
 }
 
-
-/* hides header when screen is small */
-/* centers the text box for the search vehicle name*/
-.textBoxCenter {
-    display: flex;
-    justify-content: center;
-}
-
-/* centeres the cards 4 across per column */
-.containerHoldCardsColumn {
-    padding-top: 1em;
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 25%; 
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin: 1em;
-}
-
 /* added styling for the header text */
 h1 {
     display: none;
@@ -50,6 +31,24 @@ footer {
     margin-left: .5rem;
     color:  #F95573;
     font-family: 'Roboto', sans-serif;
+}
+
+/* hides header when screen is small */
+/* centers the text box for the search vehicle name*/
+.textBoxCenter {
+    display: flex;
+    justify-content: center;
+}
+
+/* centeres the cards 4 across per column */
+.containerHoldCardsColumn {
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 25%; 
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 1em;
 }
 
 /* makes the header a flex box */
@@ -182,7 +181,7 @@ car card */
 the border */
 .comparison-cardMargin {
     display: flex;
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; not sure if this is needed */
     margin-top: 1.5rem;
 }
 
@@ -247,6 +246,11 @@ div#hamburger-menu {
 /* Style for very large screens  */
 @media (min-width: 1800px) {
 
+    button.searchButtonSize {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+    }
+
     /* makes list element font size bigger */
     div.d-lg-flex li {
         font-size: 1.5rem;
@@ -255,6 +259,22 @@ div#hamburger-menu {
     /* makes header containing car name bigger */
     h5.card-title {
         font-size: 2.25rem;
+    }
+    
+    /* Styles the button so that they are a little bigger  */
+    .form-group.mb-3.comparison-col-3 button {
+        width: 300px; 
+        height: 50px;
+        padding: 8px;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        margin-left: 4rem;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
     }
 
     /* makes the car photos bigger on big screens */
