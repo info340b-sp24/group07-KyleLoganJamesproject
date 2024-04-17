@@ -184,7 +184,7 @@ the border */
 .comparison-cardMargin {
     display: flex;
     margin-left: 1.5rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* adds margin to the search form on the comparison page */
