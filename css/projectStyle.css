@@ -85,9 +85,9 @@ footer {
 
 /*increases the text box */
 .textBox {
-  margin: auto;
-  width: 35%;
-  padding: 10px;
+    margin: auto;
+    width: 35%;
+    padding: 10px;
 }
 
 /* changes the button color to red for clear filter*/
@@ -159,6 +159,8 @@ car card */
 the border */
 .comparison-cardMargin {
     display: flex;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
 }
 
 /* adds margin to the search form on the comparison page */
