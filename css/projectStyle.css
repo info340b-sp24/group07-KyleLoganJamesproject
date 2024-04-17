@@ -137,6 +137,7 @@ car card */
 .comparison-cardFlex {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 /* changes the padding/margin around each card so that they aren't flush against
@@ -179,14 +180,4 @@ the border */
     
 }
 
-/* when on a phone screen the hamburger menu will display the links in block form */
-@media (max-width: 786px) {
-
-    /* allows for the cards to be displayed in a column when the screen is smaller */
-    .comparison-cardFlex {
-        display: flex;
-        flex-direction: column;
-    }
-    
-}
 
