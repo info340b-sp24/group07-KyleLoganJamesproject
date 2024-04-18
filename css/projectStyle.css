@@ -99,6 +99,11 @@ footer {
     
 }
 
+.centerClearFilterButton {
+    text-align: center;
+    
+}
+
 /* method to create the height of the car image.*/
 .increaseCarHeight {
     height: 200px;
@@ -108,6 +113,37 @@ footer {
 .economyButtonColor {
     color: white;
     background-color: #4FEF35;
+}
+
+/*changes the color of the sport button to red */
+.sportButtonColor {
+    color: white;
+    background-color: red;
+}
+
+/* changes the color of the sound clip button*/
+.sportButtonColorSound {
+    color: white;
+    background-color: #BDE3FF;
+}
+
+/* changes the color of the SUV button to purple  */
+.suvButtonColor {
+    color: white;
+    background-color: rgb(66, 66, 241);
+}
+
+/* changes the color of the SUV button to purple  */
+.truckButtonColor {
+    color: white;
+    background-color: rgb(190, 190, 3);
+}
+
+/*changes the more informaiont button to a certain color  */
+.moreInformationButtonColor {
+    color: white;
+    background-color: #F95573;
+    margin-bottom: 1em;
 }
 
 /*increases the text box */
