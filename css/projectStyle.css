@@ -286,7 +286,7 @@ div#hamburger-menu {
 }
 
 /* Style for very large screens  */
-@media (min-width: 1800px) {
+@media (min-width: 1580px) {
 
     button.searchButtonSize {
         margin-left: 1.5rem;
