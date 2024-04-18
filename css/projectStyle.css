@@ -72,7 +72,6 @@ footer {
 
 /* this makes the list elements stack and styles them */
 .nav-items li {
-    /* display: inline-block; */
     justify-content: center;
     align-items: center;
     margin: .5rem;
@@ -99,9 +98,9 @@ footer {
     
 }
 
+/* centers the clear filter button */
 .centerClearFilterButton {
     text-align: center;
-    
 }
 
 /* method to create the height of the car image.*/
