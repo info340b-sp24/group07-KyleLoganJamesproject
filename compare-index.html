@@ -21,30 +21,31 @@
     <!-- used to represent the top of the page header used to block off the top -->
     <header class="headerFlex">
 
+      nav bar in the top right
       <nav class="navbar navbar-expand-lg navbar-light bg-red">
+        <!-- drop down menu starts here -->
         <a class="navbar-brand" href="#"></a>
-        
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="page_images/menu-outline.svg" alt="Menu icon">
         </a>    
+        <!-- After clicking on the image, this div below opens -->
         <div class="navbar-collapse" id="navbarSupportedContent">
+          <!-- links for the dropdown menu -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="nav-link active text-dark fs-3 " aria-current="Home Page" href="#"> <a
                   class="text-dark fs-3" href="index.html">Home</a> &ensp; </a>
-  
-                  <a class="nav-link text-dark fs-2" aria-current="Upload Page" href="#"> <a
-                    class="text-dark fs-3" href="upload-index.html">Upload</a> &ensp; </a>
-  
-                  <a class="nav-link active text-dark fs-2 " aria-current="Compare Page" href="#"> <a
-                    class="text-dark fs-3" href="compare-index.html">Compare</a> </a>
+                <a class="nav-link text-dark fs-2" aria-current="Upload Page" href="#"> <a
+                  class="text-dark fs-3" href="upload-index.html">Upload</a> &ensp; </a>
+                <a class="nav-link active text-dark fs-2 " aria-current="Compare Page" href="#"> <a
+                  class="text-dark fs-3" href="compare-index.html">Compare</a> </a>
               </div>
             </li>
           </ul>
           <!-- End of dropdown menu -->
       
-          <!-- Remaining menu items -->
+          <!-- list items for when the drop down isnt active-->
           <ul class="navbar-nav ml-auto smallHide">
             <li class="nav-item">
               <a class="nav-link active text-dark fs-3 " aria-current="Home Page" href="#"> <a
@@ -59,12 +60,10 @@
                 class="text-dark fs-3" href="compare-index.html">Compare</a> </a>
             </li>
           </ul>
-          <!-- End of remaining menu items -->
+          <!-- End of list for when drop down isnt active -->
         </div>
       </nav>
-      
-
-
+    
       <!-- displays title next in the middle -->
       <h1 class="pageTitle">CarQueen</h1>
 
