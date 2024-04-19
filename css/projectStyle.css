@@ -40,36 +40,37 @@ footer {
     height: 2.5rem;
 }
 
-header img {
-    background-color: #F95573;
-}
-
+/* hides small drop down when screen is big  */
 ul.smallHide {
     display: none;
 }
 
 /* Custom CSS to extend dropdown menu */
 .navbar-collapse {
-        background-color: #F95573;
-        margin-bottom: 1.5rem;
-    }
-  
-  .navbar-collapse.show .dropdown-menu {
-        display: block;
+    background-color: #F95573;
+    margin-bottom: 1.5rem;
+}
 
-    }
+/* shows drop down when screen is small */
+.navbar-collapse.show .dropdown-menu {
+    display: block;
 
-    .nav-link.dropdown-toggle{
-        display: block;
-    }
+}
 
-  .navbar-collapse.show .dropdown-menu {
-        display: none;
-    }
-  
-  .navbar-collapse .dropdown-item {
-        color: #212529;
-    }
+/* shows the drop down menu/toggle button when screen is small */
+.nav-link.dropdown-toggle{
+    display: block;
+}
+
+/* hides drop down for big screens*/
+.navbar-collapse.show .dropdown-menu {
+    display: none;
+}
+
+/* colors nav bar drop down items */
+.navbar-collapse .dropdown-item {
+    color: #212529;
+}
 
 /* Custom CSS for menu icon */
 .menu-icon {
@@ -297,14 +298,15 @@ the border */
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
 
+    /* displays word links on big screens */
     ul.smallHide {
         display: block;
     }
 
+    /* hides the nav drop down when screen is big */
     .nav-link.dropdown-toggle{
         display: none;
     }
-
 
     /* added styling for the header text when screen is big */
     h1 {
@@ -318,11 +320,7 @@ the border */
 /* Style for very large screens  */
 @media (min-width: 1800px) {
 
-    ul.smallHide {
-        display: block;
-    }
-
-
+    /* makes the search bar bigger on big screens */
     button.searchButtonSize {
         margin-left: 1.5rem;
         font-size: 1.5rem;
