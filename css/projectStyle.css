@@ -6,10 +6,6 @@ body {
     flex-direction: column;
 }
 
-title {
-    font-weight: bold;
-}
-
 /* added background color for the header section */
 header {
     height: 150px;
@@ -44,45 +40,36 @@ footer {
     height: 2.5rem;
 }
 
+header img {
+    background-color: #F95573;
+}
+
 ul.smallHide {
-    display: block;
-}
-
-.navbar .dropdown-menu {
-    position: absolute;
-    z-index: 1000;
-    top: 100%;
-    left: 0;
     display: none;
-    float: left;
-    min-width: 10rem;
-    padding: 0.5rem 0;
-    margin: 0.125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 0.25rem;
-}
-
-.navbar .dropdown-menu li a {
-    display: block;
-    color: #212529;
 }
 
 /* Custom CSS to extend dropdown menu */
-.navbar .navbar-collapse {
-    position: relative;
-}
+.navbar-collapse {
+        background-color: #F95573;
+        margin-bottom: 1.5rem;
+    }
+  
+  .navbar-collapse.show .dropdown-menu {
+        display: block;
 
-.navbar .navbar-collapse .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
+    }
+
+    .nav-link.dropdown-toggle{
+        display: block;
+    }
+
+  .navbar-collapse.show .dropdown-menu {
+        display: none;
+    }
+  
+  .navbar-collapse .dropdown-item {
+        color: #212529;
+    }
 
 /* Custom CSS for menu icon */
 .menu-icon {
@@ -144,6 +131,7 @@ ul.smallHide {
     margin-top: 1rem;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 
 /*align text to center */
@@ -310,8 +298,13 @@ the border */
 @media (min-width: 598px) {
 
     ul.smallHide {
+        display: block;
+    }
+
+    .nav-link.dropdown-toggle{
         display: none;
     }
+
 
     /* added styling for the header text when screen is big */
     h1 {
@@ -323,7 +316,7 @@ the border */
 }
 
 /* Style for very large screens  */
-@media (min-width: 1280px) {
+@media (min-width: 1800px) {
 
     ul.smallHide {
         display: block;
@@ -343,10 +336,6 @@ the border */
     /* makes header containing car name bigger */
     h5.card-title {
         font-size: 2.25rem;
-    }
-
-    a.nav-link.dropdown-toggle{
-        display: none;
     }
     
     /* Styles the button so that they are a little bigger  */
