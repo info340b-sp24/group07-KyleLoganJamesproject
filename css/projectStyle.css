@@ -6,6 +6,10 @@ body {
     flex-direction: column;
 }
 
+title {
+    font-weight: bold;
+}
+
 /* added background color for the header section */
 header {
     height: 150px;
@@ -38,6 +42,57 @@ footer {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
+}
+
+ul.smallHide {
+    display: block;
+}
+
+.navbar .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+
+.navbar .dropdown-menu li a {
+    display: block;
+    color: #212529;
+}
+
+/* Custom CSS to extend dropdown menu */
+.navbar .navbar-collapse {
+    position: relative;
+}
+
+.navbar .navbar-collapse .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+/* Custom CSS for menu icon */
+.menu-icon {
+    background-image: url('menu-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
 }
 
 /* hides header when screen is small */
@@ -244,18 +299,6 @@ the border */
     width: 400px;
 }
 
-/* hides the phone links when screen is small */
-div#page-links {
-    display: none;
-}
-
-/* styles the hamburger menu */
-div#hamburger-menu {
-    text-align: center;
-    padding: 1em;
-    cursor: pointer;
-}
-
 /* changes hamburger menu color and size */
 #hamburger-menu i {
     text-align: center;
@@ -266,14 +309,8 @@ div#hamburger-menu {
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
 
-    /* hides the hamburger menu when screen is bigger than phone */
-    div#hamburger-menu {
+    ul.smallHide {
         display: none;
-    }
-    
-    /* display links when screen is bigger than phone */
-    div#page-links {
-        display: block;
     }
 
     /* added styling for the header text when screen is big */
@@ -282,10 +319,16 @@ div#hamburger-menu {
         font-weight: bold;
         font-family: Helvetica, sans-serif;
     }
+
 }
 
 /* Style for very large screens  */
-@media (min-width: 1580px) {
+@media (min-width: 1280px) {
+
+    ul.smallHide {
+        display: block;
+    }
+
 
     button.searchButtonSize {
         margin-left: 1.5rem;
@@ -300,6 +343,10 @@ div#hamburger-menu {
     /* makes header containing car name bigger */
     h5.card-title {
         font-size: 2.25rem;
+    }
+
+    a.nav-link.dropdown-toggle{
+        display: none;
     }
     
     /* Styles the button so that they are a little bigger  */
