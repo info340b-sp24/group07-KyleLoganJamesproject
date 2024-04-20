@@ -1,50 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    
-    <meta name="author" content="Team CarQueen: Logan Dinh, Kyle Du, and James Parrot">
-    <meta name="description" content="This page contains all information for the front page of the website.">
-    <title>Main Page of CarQueen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> <!-- port over bootstrap library-->
-    <link rel="icon" href="page_images/Lightning_McQueen_logo.gif"> <!--changes the top globe to be our team logo-->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- adds the 3 bars for the hamburger menu -->
-    <link rel="stylesheet" href="css/projectStyle.css">
+  <meta charset="utf-8">
+  <meta name="author" content="Team CarQueen: Logan Dinh, Kyle Du, and James Parrot">
+  <meta name="description" content="This page contains all information for the front page of the website.">
+  <title>Main Page of CarQueen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/projectStyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="icon" href="page_images/Lightning_McQueen_logo.gif"> <!--changes the top globe to be our team logo-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- adds the 3 bars for the hamburger menu -->
 </head>
 <body>
   
-  <main>
-    <!-- start of-->
+  <main> 
+
     <!-- used to represent the top of the page header used to block off the top -->
     <header class="headerFlex">
-      <!-- nav bar, refactored to be on the left and to be a hamburger menu -->
-      <nav>
-        <div id="hamburger-menu"><a href="#"><i class="fa fa-bars" aria-label="menu"></i></a></div>
-        <div id="page-links" class="nav-container">
-          <ul class="nav-items">
-            <li>
-              <a class="nav-link active fw-bold text-white fs-3 " aria-current="Home Page" href="#"> <a
-                  class="fw-bold text-white fs-3" href="index.html">Home</a> &ensp; </a>
-            </li>
-            <li>
-              <a class="nav-link fw-bold text-white fs-2" aria-current="Upload Page" href="#"> <a
-                  class="fw-bold text-white fs-3" href="upload-index.html">Upload</a> &ensp; </a>
-            </li>
-            <li>
-              <a class="nav-link active fw-bold text-white fs-2 " aria-current="Compare Page" href="#"> <a
-                  class="fw-bold text-white fs-3" href="compare-index.html">Compare</a> </a>
+
+      <!-- nav bar in the top right -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-red">
+        <!-- drop down menu starts here -->
+        <a class="navbar-brand" href="#"></a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="page_images/menu-outline.svg" alt="Menu icon">
+        </a>    
+        <!-- After clicking on the image, this div below opens -->
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <!-- links for the dropdown menu -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link active text-dark fs-3 " aria-current="Home Page" href="#"> 
+                  <a class="text-dark fs-3" href="index.html">Home</a> &ensp; 
+                </a>
+                <a class="nav-link text-dark fs-2" aria-current="Upload Page" href="#"> 
+                  <a class="text-dark fs-3" href="upload-index.html">Upload</a> &ensp; 
+                </a>
+                <a class="nav-link active text-dark fs-2 " aria-current="Compare Page" href="#"> 
+                  <a class="text-dark fs-3" href="compare-index.html">Compare</a> 
+                </a>
+              </div>
             </li>
           </ul>
+          <!-- End of dropdown menu -->
+      
+          <!-- list items for when the drop down isnt active-->
+          <ul class="navbar-nav ml-auto smallHide">
+            <li class="nav-item">
+              <a class="nav-link active text-dark fs-3 " aria-current="Home Page" href="#"> 
+                <a class="text-dark fs-3" href="index.html">Home</a> &ensp; 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark fs-2" aria-current="Upload Page" href="#"> 
+                <a class="text-dark fs-3" href="upload-index.html">Upload</a> &ensp; 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-dark fs-2 " aria-current="Compare Page" href="#"> 
+                <a class="text-dark fs-3" href="compare-index.html">Compare</a> 
+              </a>
+            </li>
+          </ul>
+          <!-- End of list for when drop down isnt active -->
         </div>
       </nav>
+    
       <!-- displays title next in the middle -->
-      <h1 class="pageTitle">CarQueen</h1>
+      <h1 class="pageTitle">
+        <p>CarQueen</p>
+      </h1>
+
       <!-- displays the logo first in the left corner -->
-      <img src="page_images/Lightning_McQueen_logo.gif" alt="CarQueen Logo">
+      <a href="index.html" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+        <img src="page_images/Lightning_McQueen_logo.gif" alt="CarQueen Logo">
+      </a>
     </header>
+
 
   <!-- getting the user input for specific car name to filter based on their needs.-->
   <form>
@@ -333,11 +368,15 @@
       </div>
     </div>
   </div>
-  <!-- need to figure out still how to seperate each car horizontally so each line has diff cars-->
 </main>
+
 
   <!-- footer -->
   <footer class="footerFlexWrapper">©2024 CarQueen 340</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- END OF DOCUMENT BODY -->
 </body> 
 </html>     
