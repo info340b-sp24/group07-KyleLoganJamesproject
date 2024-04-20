@@ -293,7 +293,22 @@ the border */
     text-align: center;
     font-size: 24px;
     color: white; /* Default color for the hamburger icon */
-}  
+}
+
+.flex-container {
+    display: flex;
+}
+
+.left-section {
+    flex: 1;
+    padding: 50px;
+}
+
+.right-section {
+    flex: 1;
+    padding: 50px;
+    flex-direction: row;
+}
 
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
@@ -370,10 +385,4 @@ the border */
         font-weight: bold;
         font-size: 3.25rem;
     }
-    
-
-
 }
-
-
-
