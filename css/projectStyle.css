@@ -292,7 +292,7 @@ the border */
 #hamburger-menu i {
     text-align: center;
     font-size: 24px;
-    color: white; /* Default color for the hamburger icon */
+    color: white;
 }  
 
 /* when on a phone screen the hamburger menu will display the links in block form */
