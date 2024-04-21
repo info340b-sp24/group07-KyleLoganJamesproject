@@ -226,7 +226,7 @@ ul.smallHide {
     display: flex;
 }
 
-/* Styles the button in the comparison card */
+/* Styles the serach button in the comparison card */
 .form-group.mb-3.comparison-col-3 button {
     width: 280px; 
     height: 40px;
@@ -238,8 +238,6 @@ ul.smallHide {
     background-color: #007bff;
     color: white;
     border-radius: 4px;
-    cursor: pointer;
-    outline: none;
 }
 
 /* changes button color when hovering over it */
@@ -266,7 +264,6 @@ car card */
 the border */
 .comparison-cardMargin {
     display: flex;
-    /* margin-left: 1.5rem; not sure if this is needed */
     margin-top: 1.5rem;
 }
 
@@ -286,13 +283,6 @@ the border */
 .comparison-vsImage {
     height: 400px;
     width: 400px;
-}
-
-/* changes hamburger menu color and size */
-#hamburger-menu i {
-    text-align: center;
-    font-size: 24px;
-    color: white; /* Default color for the hamburger icon */
 }
 
 /* creates a reponsive webpage using Flexbox */
