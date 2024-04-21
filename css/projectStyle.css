@@ -292,8 +292,34 @@ the border */
 #hamburger-menu i {
     text-align: center;
     font-size: 24px;
-    color: white;
-}  
+    color: white; /* Default color for the hamburger icon */
+}
+
+/* creates a reponsive webpage using Flexbox */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* creates the left side of the webpage reponsive using Flexbox */
+.left-section {
+    flex: 1;
+    padding: 40px;
+}
+
+/* creates the right side of the webpage reponsive using Flexbox */
+.right-section {
+    flex: 1;
+    padding: 40px;
+}
+
+/* standardize the header fonts on the right side of the webpage  */
+.header-font {
+    font-size: 1.5rem;
+    font-family: Helvetica, sans-serif;
+}
 
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
@@ -370,10 +396,4 @@ the border */
         font-weight: bold;
         font-size: 3.25rem;
     }
-    
-
-
 }
-
-
-
