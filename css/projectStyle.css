@@ -364,10 +364,8 @@ the border */
         background-color: #007bff;
         color: white;
         border-radius: 4px;
-        cursor: pointer;
-        outline: none;
     }
-
+    
     /* makes the car photos bigger on big screens */
     .comparison-increaseCarHeight {
         height: 300px;
