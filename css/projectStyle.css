@@ -156,6 +156,7 @@ ul.smallHide {
 .economyButtonColor {
     color: white;
     background-color: #4FEF35;
+    
 }
 
 /*changes the color of the sport button to red */
@@ -180,13 +181,6 @@ ul.smallHide {
 .truckButtonColor {
     color: white;
     background-color: rgb(190, 190, 3);
-}
-
-/*changes the more informaiont button to a certain color  */
-.moreInformationButtonColor {
-    color: white;
-    background-color: #F95573;
-    margin-bottom: 1em;
 }
 
 /*increases the text box */
