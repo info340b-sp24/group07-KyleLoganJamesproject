@@ -139,7 +139,6 @@ ul.smallHide {
 .textCenter {
     text-align: center;
     display: flex;
-    
 }
 
 /* centers the clear filter button */
@@ -156,7 +155,6 @@ ul.smallHide {
 .economyButtonColor {
     color: white;
     background-color: #4FEF35;
-    
 }
 
 /*changes the color of the sport button to red */
@@ -247,13 +245,6 @@ car card */
     flex-basis: 25%; 
 }
 
-/* makes the comparison card a flex box */
-.comparison-cardFlex {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
 /* changes the padding/margin around each card so that they aren't flush against
 the border */
 .comparison-cardMargin {
@@ -261,16 +252,25 @@ the border */
     margin-top: 1.5rem;
 }
 
+/* makes the comparison cards verticle when small screen */
+.comparison-cardFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+}
+
+/* makes logo flex box and centered on small*/
+.comparison-vsFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+}
+    
 /* adds margin to the search form on the comparison page */
 .comparison-searchPosition {
     margin-bottom: .5rem;
-}
-
-/* makes logo a flex box */
-.comparison-vsFlex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
 }
 
 /* styles the VS image on the comparison page */
@@ -308,6 +308,13 @@ the border */
 /* when on a phone screen the hamburger menu will display the links in block form */
 @media (min-width: 598px) {
 
+    /* added styling for the header text when screen is big */
+    h1 {
+        display: block;
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+    }
+
     /* displays word links on big screens */
     ul.smallHide {
         display: block;
@@ -318,13 +325,24 @@ the border */
         display: none;
     }
 
-    /* added styling for the header text when screen is big */
-    h1 {
-        display: block;
-        font-weight: bold;
-        font-family: Helvetica, sans-serif;
+}
+
+@media (min-width: 1100px){
+    /* makes the comparison cards horizontal for big screens*/
+    .comparison-cardFlex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; 
+        flex-direction: row; 
     }
 
+    /* makes the comparison image horizontal for big screens*/
+    .comparison-vsFlex{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; 
+        flex-direction: row; 
+    }
 }
 
 /* Style for very large screens  */
@@ -345,22 +363,6 @@ the border */
     h5.card-title {
         font-size: 2.25rem;
     }
-
-    /* makes the comparison card a flex box */
-    .comparison-cardFlex {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        flex-direction: column; 
-    }
-
-    /* makes logo a flex box */
-    .comparison-vsFlex{
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
-        flex-direction: column; 
-    }
     
     /* Styles the button so that they are a little bigger  */
     .form-group.mb-3.comparison-col-3 button {
@@ -375,7 +377,7 @@ the border */
         color: white;
         border-radius: 4px;
     }
-    
+
     /* makes the car photos bigger on big screens */
     .comparison-increaseCarHeight {
         height: 300px;
