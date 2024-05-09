@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './components/App';
+
+// styling
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
 // ADD JSON OBJECT IMPORT AND PASS INTO APP as a prop
 
