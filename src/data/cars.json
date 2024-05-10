@@ -1,5 +1,105 @@
 [
     {
+        "car_name": "2024 Toyota Prius AWD Sedan",
+        "description": "An affordable economy car meant for the average consumer wanting a fuel efficient vehicle to get them from point A to B.",
+        "type": "Economy",
+        "link": "https://www.toyota.com/prius/",
+        "image": "car_images/2024-toyota-prius.png",
+        "price": 27950,
+        "luxury_scale": 5,
+        "saftey_rating": 4,
+        "MPG": 57
+    },
+
+    {
+        "car_name": "2024 Honda Civic",
+        "description": "An affordable and sporty economy vehicle meant for point A to B with slight excitement while still bringing good gas milage. It also has Bose premium audio if anyone likes jaming out.",
+        "type": "Economy",
+        "link": "https://automobiles.honda.com/civic",
+        "image": "car_images/2024_Honda_Civic.png",
+        "price": 23950,
+        "luxury_scale": 6,
+        "saftey_rating": 4,
+        "MPG": 33
+    },
+
+    {
+        "car_name": "2024 Volkswagen Jetta",
+        "description": "James's dream car! An affordable economy vehicle that offers both practicality with slight German luxury.",
+        "type": "Economy",
+        "link": "https://www.vw.com/en/models/jetta.html",
+        "image": "car_images/2022_volkswagen_jetta.png",
+        "price": 21345,
+        "luxury_scale": 4,
+        "saftey_rating": 3,
+        "MPG": 35
+    },
+
+    {
+        "car_name": "2024 Nissan Versa",
+        "description": "An extremely affordable economy vehicle that is compact for primary city commuters. It also is heavily discounted because of its competition beating the car in other aspects.",
+        "type": "Economy",
+        "link": "https://www.nissanusa.com/vehicles/cars/versa-sedan.html",
+        "image": "car_images/2024-nissan-versa.png",
+        "price": 16680,
+        "luxury_scale": 3,
+        "saftey_rating": 4,
+        "MPG": 30
+    },
+
+    {
+        "car_name": "2024 BMW M3 Competition xDrive",
+        "description": "An extremely fast sports sedan engineered for the track and road generating 503 beautiful German horsepower. ",
+        "type": "Sport",
+        "sound_clip": "https://www.youtube.com/watch?v=O89GPMfQzRw",
+        "link": "https://www.bmwusa.com/vehicles/m-models/m3-sedan/overview.html",
+        "image": "car_images/2021-bmw-m3-competition-04.webp",
+        "price": 91295,
+        "luxury_scale": 10,
+        "saftey_rating": 3,
+        "MPG": 18
+    },
+
+    {
+        "car_name": "2024 Chevy Corvette ZO6 RWD",
+        "description": "Logan's dream car! An extremely fast and sexy sports car engineered for the track creating an eye watering 670 beautiful American Horsepower. ",
+        "type": "Sport",
+        "sound_clip": "https://www.youtube.com/watch?v=F7eXeb_cd7o",
+        "link": "https://www.chevrolet.com/performance/corvette/z06",
+        "image": "car_images/2023-chevy-corvette-z06.png",
+        "price": 110100,
+        "luxury_scale": 10,
+        "saftey_rating": 3,
+        "MPG": 15
+    },
+
+    {
+        "car_name": "2024 Acura TLX Type-S SH-AWD",
+        "description": "An incredible Japanese sports car created for both as a track and daily commuter generating 355HP. Also includes suspension that changes based on the drive mode for a easy daily driver. ",
+        "type": "Sport",
+        "sound_clip": "https://www.youtube.com/watch?v=dFxoJaJTUqM",
+        "link": "https://www.acura.com/cars/tlx/features?tab=type-s",
+        "image": "car_images/2024_acura_tlx_sedan_type-s.png",
+        "price": 58195,
+        "luxury_scale": 8,
+        "saftey_rating": 4,
+        "MPG": 21
+    },
+
+    {
+        "car_name": "2024 Porsche 911 GT3",
+        "description": "An incredibly perfected sports coupe generating 502hp and has been crafted for generations. Every car enthusiastic dream car and what every automotive engineer inspires to work on. ",
+        "type": "Sport",
+        "sound_clip": "https://www.youtube.com/watch?v=AF0rfhk3kO4",
+        "link": "https://www.porsche.com/usa/models/911/911-gt3-models/911-gt3-touring/",
+        "image": "car_images/2023_porsche_911_coupe_gt3.png",
+        "price": 182900,
+        "luxury_scale": 10,
+        "saftey_rating": 2,
+        "MPG": 16
+    },
+
+    {
         "car_name": "2024 Toyota Highlander AWD",
         "description": "Kyle's dream car! A great soccer mom vehicle meant to transport you and 6 other passangers from point A to B reliably. It is a great vehicle when it comes to value also. ",
         "type": "SUV",
