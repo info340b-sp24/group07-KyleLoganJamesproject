@@ -1,4 +1,5 @@
 import React from 'react'; //import React library
+import { CompareApp } from './CompareApp'; //import CompareApp from CompareApp.js
 
 // add imports for each page
 
@@ -6,12 +7,11 @@ import React from 'react'; //import React library
 // otherwise calls on all 3 pages and it will render which ever page
 // is not commented out
 export function App(props) {
-    return (
-      <div>
-        <HomePage />
-        {/* < home page/> */}
-        {/* <compare page /> */}
-        {/* <insert car page /> */}
-      </div>
-    )
-  }
+  return (
+    <div>
+      {/* < home page/> */}
+      <CompareApp props={props} />
+      {/* <insert car page /> */}
+    </div>
+  )
+}

@@ -74,7 +74,6 @@ ul.smallHide {
 
 /* Custom CSS for menu icon */
 .menu-icon {
-    background-image: url('menu-icon.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 30px;
@@ -397,4 +396,3 @@ the border */
         font-size: 3.25rem;
     }
 }
-
