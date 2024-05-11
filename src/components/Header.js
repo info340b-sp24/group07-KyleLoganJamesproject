@@ -8,7 +8,7 @@ export function Header(props) {
             <header className="headerFlex">
 
             {/* <!-- nav bar in the top right --> */}
-            <nav className="navbar navbar-expand-lg navbar-light bg-red p-0">
+            <nav className="navBarMenuMargin navbar navbar-expand-lg navbar-light bg-red p-0">
                 {/* <!-- drop down menu starts here --> */}
                 <a className="navbar-brand" href="#"></a>
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,7 +35,7 @@ export function Header(props) {
                 {/* <!-- End of dropdown menu -->
             
                 <!-- list items for when the drop down isnt active--> */}
-                <ul className="navbar-nav ml-auto smallHide">
+                <ul className="navBarMargin navbar-nav ml-auto smallHide">
                     <li className="nav-item">
                     <a className="nav-link active text-white fs-2 mt-3 p-0" aria-current="Home Page" href="index.html"> 
                         Home 
