@@ -113,6 +113,11 @@ ul.smallHide {
     margin-left: auto;
 }
 
+/* this moves the nav bar a little to the right */
+.navBarMargin {
+    margin-left: .5rem;
+}
+
 /* this makes the list elements stack and styles them */
 .nav-items li {
     justify-content: center;
