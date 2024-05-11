@@ -10,9 +10,9 @@ import { Header } from './Header'; //import Header from Header.js
 export function App(props) {
   return (
     <div className='container-fluid p-0'>
-      <Header props={props} />
+      {/* <Header props={props} /> */}
       {/* < home page/> */}
-      <CompareApp props={props} />
+      {/* <CompareApp props={props} /> */}
       {/* <insert car page /> */}
     </div>
   )
