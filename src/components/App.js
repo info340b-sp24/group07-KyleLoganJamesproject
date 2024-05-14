@@ -23,7 +23,7 @@ function App(props) {
       {/* <insert car page /> */}
       {/* <Header /> */}
       <main>
-        {/* <Home carData={props.props}/> */}
+        <Home carData={props.props}/>
         {/* <CompareApp props={props} /> */}
         {/* <insert car page /> */}
       </main>
