@@ -1,12 +1,9 @@
 import React from 'react'; //import React library
-// import { CompareApp } from './CompareApp'; //import CompareApp from CompareApp.js
 import { Header } from './Header'; //import Header from Header.js
 import Home from './Home';
-import MoreInformation from './Moreinformation';
-import { TopOfHomePage } from './Home';
-import React from 'react';
-import { CompareApp } from './CompareApp';
-import { Header } from './Header'; 
+import MoreInformation from './Moreinformation.js';
+import { TopOfHomePage } from './Home.js';
+import { CompareApp } from './CompareApp.js';
 import { Footer } from './Footer.js'; 
 
 // add imports for each page
@@ -20,17 +17,17 @@ function App(props) {
       
       {/* <Header props={props} /> */}
       {/* < home page/> */}
-      <Home carData={props.props}/>
+      {/* <Home carData={props.props}/> */}
       {/* <MoreInformation carData={props.props}/> */}
       {/* <CompareApp props={props} /> */}
       {/* <insert car page /> */}
-      <Header />
+      {/* <Header /> */}
       <main>
-        {/* < home page/> */}
-        <CompareApp props={props} />
+        {/* <Home carData={props.props}/> */}
+        {/* <CompareApp props={props} /> */}
         {/* <insert car page /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

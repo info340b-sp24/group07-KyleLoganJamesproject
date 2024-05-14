@@ -1,5 +1,5 @@
 import React from 'react';
-import { CompareCard } from './CompareCard.js'; 
+import { CompareCardBody } from './CompareCardBody.js'; 
 
 export function CompareApp(props) {
 
@@ -12,13 +12,13 @@ export function CompareApp(props) {
     return (
         <div className="comparison-cardFlex d-lg-flex">
                 
-            <CompareCard props={props} car={1}/>
+            <CompareCardBody props={props} car={1}/>
             {/* <!-- div for the vs logo in the center of the page --> */}
             <div className="comparison-vsFlex flex-item comparison-cardMargin">
                 <img className="comparison-vsImage" src="page_images/vs-versus-text-logo-battle-fight-game-flat-cartoon-symbol_101884-738.avif" alt="Versus Logo"></img>
             </div>
 
-            <CompareCard props={props} car={2}/>
+            <CompareCardBody props={props} car={2}/>
         </div> 
     )
 }
