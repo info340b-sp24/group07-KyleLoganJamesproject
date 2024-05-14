@@ -11,13 +11,13 @@ import { Footer } from './Footer.js';
 export function App(props) {
   return (
     <div className='container-fluid p-0'>
-      <Header props={props} />
+      <Header />
       <main>
         {/* < home page/> */}
         <CompareApp props={props} />
         {/* <insert car page /> */}
       </main>
-      <Footer props={props}/>
+      <Footer />
     </div>
   )
 }

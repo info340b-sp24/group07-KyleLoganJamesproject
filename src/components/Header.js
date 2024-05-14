@@ -1,4 +1,6 @@
 import React from 'react';
+import { HeaderDropdown} from './HeaderDropdown';
+import { HeaderNonActiveDropdown} from './HeaderNonActiveDropdown';
 
 export function Header(props) {
 
@@ -17,41 +19,11 @@ export function Header(props) {
                 {/* <!-- After clicking on the image, this div below opens --> */}
                 <div className="navbar-collapse" id="navbarSupportedContent">
                 {/* <!-- links for the dropdown menu --> */}
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item dropdown">
-                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="nav-link active text-dark fs-2 " aria-current="Home Page" href="index.html"> 
-                        Home 
-                        </a>
-                        <a className="nav-link text-dark fs-2" aria-current="Upload Page" href="upload-index.html"> 
-                        Upload
-                        </a>
-                        <a className="nav-link active text-dark fs-2 " aria-current="Compare Page" href="compare-index.html"> 
-                        Compare
-                        </a>
-                    </div>
-                    </li>
-                </ul>
+                <HeaderDropdown props={props}/>
                 {/* <!-- End of dropdown menu -->
             
                 <!-- list items for when the drop down isnt active--> */}
-                <ul className="navBarMargin navbar-nav ml-auto smallHide">
-                    <li className="nav-item">
-                    <a className="nav-link active text-white fs-2 mt-3 p-0" aria-current="Home Page" href="index.html"> 
-                        Home 
-                    </a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link text-white fs-2 p-0" aria-current="Upload Page" href="upload-index.html">
-                        Upload 
-                    </a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link active text-white fs-2 p-0" aria-current="Compare Page" href="compare-index.html"> 
-                        Compare
-                    </a>
-                    </li>
-                </ul>
+                <HeaderNonActiveDropdown props={props}/>
                 {/* <!-- End of list for when drop down isnt active --> */}
                 </div>
             </nav>

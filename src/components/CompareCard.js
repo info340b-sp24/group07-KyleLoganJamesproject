@@ -1,16 +1,7 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState }from 'react';
 import { CompareCardBody } from './CompareCardBody.js';
 
 export function CompareCard(props) {
-    // then develop a state variable where we see if the form has been inputed yet
-    // if its not we want to display a default car card
-    // but then once we see its updated we want to filter for the right car then pass that object in
-    // to the car card component. 
-
-    
-
-    // console.log(props)
-
     // string variables for card displays
     const cardNumber = "Car" + props.car;
     const cardSearchNumber = "Car #" + props.car;
@@ -32,12 +23,13 @@ export function CompareCard(props) {
         }
     }
     
-    // searches for a car in the json file
+    // searches for a car in the json file made change here 
     const searchedCar = props.props.props.props.filter((searchCar) => {
-        return searchCar.car_name === car;
+        searchCar.car_name === car;
+        return <CompareCardBody props={searchedCar[0]} searched={searchOrNot}/>
     });
 
-    // USE LATER
+    // shows for all cars in our json file 
     const optionElems = props.props.props.props.map((cars, index) => {
         return <option key={index} value={cars.car_name}>{cars.car_name}</option>
     });
@@ -45,7 +37,7 @@ export function CompareCard(props) {
     // when passing the prop into comapreCardBody, that should be a indivual car object
     return(
         <div className="comparison-cardMargin d-flex flex-column">
-            {/* <!-- this represents the search bar of car 1.--> */}
+            {/* <!-- this represents the search bar of car.--> */}
             <form className="comparison-searchPosition d-flex flex-column">
                 <h2 className="comparison-searchCarTitle">{cardNumber}</h2>
 
@@ -59,7 +51,7 @@ export function CompareCard(props) {
 
                     {/* <!-- the cards starts here, uses border-secondary to acheive black outline --> */}
                     <div className="card border-secondary">
-                        <CompareCardBody props={searchedCar[0]} searched={searchOrNot}/>
+                        <searchedCar />
 
                         </div>
                     </div>

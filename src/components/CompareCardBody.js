@@ -28,6 +28,8 @@ export function CompareCardBody(props) {
         altTag = props.props.car_name;
     }
 
+    
+
     return(
         <div className="card-body">
             <img src={carImage} className="comparison-increaseCarHeight"

@@ -15,7 +15,7 @@ export function CompareApp(props) {
                 
             <CompareCard props={props} car={1}/>
             {/* <!-- div for the vs logo in the center of the page --> */}
-            <CompareImage props={props}/>
+            <CompareImage />
 
             <CompareCard props={props} car={2}/>
         </div> 
