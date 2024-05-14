@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './components/App';
 import carList from './data/cars.json';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 
