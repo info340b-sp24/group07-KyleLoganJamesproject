@@ -54,7 +54,6 @@ ul.smallHide {
 /* shows drop down when screen is small */
 .navbar-collapse.show .dropdown-menu {
     display: block;
-
 }
 
 /* shows the drop down menu/toggle button when screen is small */

@@ -1,36 +1,57 @@
 import React from 'react';
 
 export function CompareCardBody(props) {
-    console.log(props);
-    // if false, make everything a question mark, but if true, fill in car info as needed
-    let carName = "?????";
-    let category = "?";
-    let price = "?";
-    let mpg = "?";
-    let luxury = "?";
-    let saftey = "?";
-
-    // link back to compare page(do this later with router)
-    let link = "./CompareApp.js";
+    let carName = "Pick a car to compare!";
+    let carImage ="page_images/unknownCar.png"
     let altTag = "A placeholder vehicle until a user searches for a vehicle";
-    let carImage = "page_images/unknownCar.png";
-
+    let link = "./CompareApp.js";
+    let carDetailsArray = [
+        "?", // 0
+        "?", // 1
+        "?", // 2
+        "?", // 3
+        "?", // 4
+    ];
 
     if(props.searched) {
+        const keys = Object.keys(props.props);
+        console.log(props.props.car_name);
         carName = props.props.car_name;
-        category = props.props.type;
-        price = "$"+ new Intl.NumberFormat('en-US').format(props.props.price);
-        mpg = props.props.MPG + " MPG";
-        luxury = props.props.luxury_scale;
-        saftey = props.props.saftey_rating;
-        link = props.props.link;
         carImage = props.props.image;
-        altTag = props.props.car_name;
+        altTag = props.props.description;
+
+        carDetailsArray = keys.map((key, index) => {
+            
+            if(key === "type") { // category
+                return carDetailsArray[0] = <li key={index}>Car Category: {props.props[key]}</li>
+            } else if (key === "price") { // price
+                return carDetailsArray[1] = <li key={index}>Price: ${props.props[key]}</li>
+            } else if (key === "MPG") { // mpg
+                return carDetailsArray[2] = <li key={index}>Miles Per Gallon: {props.props[key]} MPG</li>
+            } else if (key === "luxury_scale") { // luxury
+                return carDetailsArray[3] = <li key={index}>Luxury scale (1-10): {props.props[key]}</li>
+            }  else if (key === "saftey_rating") { // saftey
+                return carDetailsArray[4] = <li key={index}>Saftey Rating (1-5): {props.props[key]}</li>
+            }
+        });
+
+    } else {
+        carDetailsArray = carDetailsArray.map((key, index) => {
+            if(index === 0) { // category
+                return carDetailsArray[0] = <li key={index}>Car Category: ?</li>
+            } else if (index === 1) { // price
+                return carDetailsArray[1] = <li key={index}>Price: ?</li>
+            } else if (index === 2) { // mpg
+                return carDetailsArray[2] = <li key={index}>Miles Per Gallon: ?</li>
+            } else if (index === 3) { // luxury
+                return carDetailsArray[3] = <li key={index}>Luxury scale (1-10): ?</li>
+            }  else if (index === 4) { // saftey
+                return carDetailsArray[4] = <li key={index}>Saftey Rating (1-5): ?</li>
+            }
+        });
     }
 
-    
-
-    return(
+    return (
         <div className="card-body">
             <img src={carImage} className="comparison-increaseCarHeight"
                 alt={altTag}></img>
@@ -39,21 +60,7 @@ export function CompareCardBody(props) {
 
             {/* <!-- List for car elements --> */}
             <ul className="card-text text-black">
-                <li>
-                Car Category: {category}
-                </li>
-                <li>
-                Price: {price}
-                </li>
-                <li>
-                Miles Per Gallon: {mpg}
-                </li>
-                <li>
-                Luxury Scale (1-10): {luxury}
-                </li>
-                <li>
-                Saftey Rating: {saftey}
-                </li>
+                {carDetailsArray}
             </ul>
 
             <a href={link} className="btn btn-primary">Official Webpage</a>
