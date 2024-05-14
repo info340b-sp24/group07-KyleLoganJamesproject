@@ -12,6 +12,18 @@
     },
 
     {
+        "car_name": "2007 Hyundai Elantra",
+        "description": "The greatest call of all time, not really its really old and not that great. ",
+        "type": "Economy",
+        "link": "https://www.kbb.com/hyundai/elantra/2007/",
+        "image": "car_images/2007_hyundai_elantra_sedan_limited_fq_oem_2_1600.png",
+        "price": 6000,
+        "luxury_scale": 2,
+        "saftey_rating": 4,
+        "MPG": 30
+    },
+
+    {
         "car_name": "2024 Honda Civic",
         "description": "An affordable and sporty economy vehicle meant for point A to B with slight excitement while still bringing good gas milage. It also has Bose premium audio if anyone likes jaming out.",
         "type": "Economy",

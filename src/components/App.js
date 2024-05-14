@@ -1,6 +1,7 @@
-import React from 'react'; //import React library
-import { CompareApp } from './CompareApp'; //import CompareApp from CompareApp.js
-import { Header } from './Header'; //import Header from Header.js
+import React from 'react';
+import { CompareApp } from './CompareApp';
+import { Header } from './Header'; 
+import { Footer } from './Footer.js'; 
 
 // add imports for each page
 
@@ -11,9 +12,12 @@ export function App(props) {
   return (
     <div className='container-fluid p-0'>
       <Header props={props} />
-      {/* < home page/> */}
-      <CompareApp props={props} />
-      {/* <insert car page /> */}
+      <main>
+        {/* < home page/> */}
+        <CompareApp props={props} />
+        {/* <insert car page /> */}
+      </main>
+      <Footer props={props}/>
     </div>
   )
 }

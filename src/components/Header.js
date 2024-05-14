@@ -8,7 +8,7 @@ export function Header(props) {
             <header className="headerFlex">
 
             {/* <!-- nav bar in the top right --> */}
-            <nav className="navBarMenuMargin navbar navbar-expand-lg navbar-light bg-red p-0">
+            <nav className="navBarMenuMargin navbar navbar-expand-lg navbar-light bg-red">
                 {/* <!-- drop down menu starts here --> */}
                 <a className="navbar-brand" href="#"></a>
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -223,23 +223,10 @@ ul.smallHide {
     display: flex;
 }
 
-/* Styles the serach button in the comparison card */
-.form-group.mb-3.comparison-col-3 button {
-    width: 280px; 
-    height: 40px;
-    padding: 8px;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    margin-left: 1.7rem;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-}
-
-/* changes button color when hovering over it */
-.form-group.mb-3.comparison-col-3  button:hover {
-    background-color: rebeccapurple; 
+/* Styles the serach bar for the comparison page */
+.comparison-carSearchBar {
+    margin-bottom: 1rem;
+    border: 1px solid black;
 }
 
 /* changes the search bars length on the comparison page TODO: make media query for this so that when its smaller it takes up the same length as the
@@ -367,20 +354,6 @@ the border */
     /* makes header containing car name bigger */
     h5.card-title {
         font-size: 2.25rem;
-    }
-    
-    /* Styles the button so that they are a little bigger  */
-    .form-group.mb-3.comparison-col-3 button {
-        width: 300px; 
-        height: 50px;
-        padding: 8px;
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-        margin-left: 4rem;
-        border: none;
-        background-color: #007bff;
-        color: white;
-        border-radius: 4px;
     }
 
     /* makes the car photos bigger on big screens */
