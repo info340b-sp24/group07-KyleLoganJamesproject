@@ -4,6 +4,8 @@ import { HeaderNonActiveDropdown} from './HeaderNonActiveDropdown';
 
 export function Header(props) {
 
+    const headerOptions = ["Home", "Upload", "Compare"];
+
     return (
         <div>
             {/* <!-- used to represent the top of the page header used to block off the top --> */}
@@ -19,11 +21,11 @@ export function Header(props) {
                 {/* <!-- After clicking on the image, this div below opens --> */}
                 <div className="navbar-collapse" id="navbarSupportedContent">
                 {/* <!-- links for the dropdown menu --> */}
-                <HeaderDropdown props={props}/>
+                <HeaderDropdown props={headerOptions}/>
                 {/* <!-- End of dropdown menu -->
             
                 <!-- list items for when the drop down isnt active--> */}
-                <HeaderNonActiveDropdown props={props}/>
+                <HeaderNonActiveDropdown props={headerOptions}/>
                 {/* <!-- End of list for when drop down isnt active --> */}
                 </div>
             </nav>
