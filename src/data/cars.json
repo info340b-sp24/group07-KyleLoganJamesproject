@@ -165,7 +165,7 @@
         "type": "Truck",
         "link": "https://www.ford.com/trucks/f150/models/f150-tremor/",
         "image": "car_images/2023-f-150-tremor.png",
-        "price": 36770,
+        "price": 40770,
         "luxury_scale": 6,
         "saftey_rating": 4,
         "MPG": 25
@@ -189,7 +189,7 @@
         "type": "Truck",
         "link": "https://www.ramtrucks.com/ram-1500/specs.limited.html",
         "image": "car_images/2024-ram-1500-limited.png",
-        "price": 39420,
+        "price": 40420,
         "luxury_scale": 6,
         "saftey_rating": 4,
         "MPG": 20
