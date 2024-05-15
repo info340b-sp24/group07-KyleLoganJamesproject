@@ -21,13 +21,13 @@ function App(props) {
       {/* <MoreInformation carData={props.props}/> */}
       {/* <CompareApp props={props} /> */}
       {/* <insert car page /> */}
-      {/* <Header /> */}
+      <Header />
       <main>
-        <Home carData={props.props}/>
-        {/* <CompareApp props={props} /> */}
+        {/* <Home carData={props.props}/> */}
+        <CompareApp props={props} />
         {/* <insert car page /> */}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

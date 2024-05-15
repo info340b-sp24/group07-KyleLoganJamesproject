@@ -5,6 +5,8 @@ export function CompareCardBody(props) {
     let carImage ="page_images/unknownCar.png"
     let altTag = "A placeholder vehicle until a user searches for a vehicle";
     let link = "./CompareApp.js";
+
+    
     let carDetailsArray = [
         "?", // 0
         "?", // 1
@@ -21,33 +23,48 @@ export function CompareCardBody(props) {
         altTag = props.props.description;
 
         carDetailsArray = keys.map((key, index) => {
-            
+            let text = "";
+
+
             if(key === "type") { // category
-                return carDetailsArray[0] = <li key={index}>Car Category: {props.props[key]}</li>
+                text = "Car Category: " + props.props[key];
             } else if (key === "price") { // price
-                return carDetailsArray[1] = <li key={index}>Price: ${props.props[key]}</li>
+                text = "Price: " + props.props[key];
             } else if (key === "MPG") { // mpg
-                return carDetailsArray[2] = <li key={index}>Miles Per Gallon: {props.props[key]} MPG</li>
+                text = "Miles Per Gallon: " + props.props[key];
             } else if (key === "luxury_scale") { // luxury
-                return carDetailsArray[3] = <li key={index}>Luxury scale (1-10): {props.props[key]}</li>
+                text = "Luxury Scale (1-10): " + props.props[key];
             }  else if (key === "saftey_rating") { // saftey
-                return carDetailsArray[4] = <li key={index}>Saftey Rating (1-5): {props.props[key]}</li>
+                text = "Saftey Rating (1-5): " + props.props[key];
             }
+            
+            if(text !== "") {
+                return <li key={index}>{text}</li>
+            }
+
+            
         });
 
     } else {
+
         carDetailsArray = carDetailsArray.map((key, index) => {
+            let text = "";
             if(index === 0) { // category
-                return carDetailsArray[0] = <li key={index}>Car Category: ?</li>
+                text = "Car Category: ?";
             } else if (index === 1) { // price
-                return carDetailsArray[1] = <li key={index}>Price: ?</li>
+                text = "Price: ?";
             } else if (index === 2) { // mpg
-                return carDetailsArray[2] = <li key={index}>Miles Per Gallon: ?</li>
+                text = "Miles Per Gallon: ?";
             } else if (index === 3) { // luxury
-                return carDetailsArray[3] = <li key={index}>Luxury scale (1-10): ?</li>
+                text = "Luxury Scale (1-10): ?";
             }  else if (index === 4) { // saftey
-                return carDetailsArray[4] = <li key={index}>Saftey Rating (1-5): ?</li>
+                text = "Saftey Rating (1-5): ?";
             }
+
+            if(text !== "") {
+                return <li key={index}>{text}</li>
+            }
+
         });
     }
 
