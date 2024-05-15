@@ -8,11 +8,11 @@ export function CompareCardBody(props) {
 
     
     let carDetailsArray = [
-        "?", // 0
-        "?", // 1
-        "?", // 2
-        "?", // 3
-        "?", // 4
+        "?", 
+        "?", 
+        "?",
+        "?",
+        "?",
     ];
 
     if(props.searched) {
