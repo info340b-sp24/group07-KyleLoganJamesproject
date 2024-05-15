@@ -15,9 +15,7 @@ export function Header(props) {
             <nav className="navBarMenuMargin navbar navbar-expand-lg navbar-light bg-red">
                 {/* <!-- drop down menu starts here --> */}
                 <a className="navbar-brand" href="#"></a>
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="../page_images/menu-outline.svg" alt="Menu icon"></img>
-                </a>    
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../page_images/menu-outline.svg" alt="Menu icon"></img></a>    
                 {/* <!-- After clicking on the image, this div below opens --> */}
                 <div className="navbar-collapse" id="navbarSupportedContent">
                 {/* <!-- links for the dropdown menu --> */}
