@@ -4,7 +4,7 @@ import Home from './Home';
 import MoreInformation from './Moreinformation.js';
 import { TopOfHomePage } from './Home.js';
 import { UploadImage } from './ImageUpload.js';
-// import { UploadInput } from './CarUpload.js';
+import { UploadDetails } from './CarDetailsUpload.js';
 import { CompareApp } from './CompareApp.js';
 import { Footer } from './Footer.js'; 
 
@@ -27,6 +27,7 @@ function App(props) {
       <main>
         <UploadImage props={props} />
         {/* <UploadInput props={props} /> */}
+        {/* <UploadDetails props={props} /> */}
         {/* <Home carData={props.props}/> */}
         {/* <CompareApp props={props} /> */}
         {/* <insert car page /> */}
