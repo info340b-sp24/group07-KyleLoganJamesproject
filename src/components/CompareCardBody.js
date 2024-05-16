@@ -15,6 +15,7 @@ export function CompareCardBody(props) {
         "?",
     ];
 
+    // this updates the text being displayed for the car
     if(props.searched) {
         const keys = Object.keys(props.props);
         console.log(props.props.car_name);
@@ -26,15 +27,15 @@ export function CompareCardBody(props) {
             let text = "";
 
 
-            if(key === "type") { // category
+            if(key === "type") { 
                 text = "Car Category: " + props.props[key];
-            } else if (key === "price") { // price
+            } else if (key === "price") { 
                 text = "Price: " + props.props[key];
-            } else if (key === "MPG") { // mpg
+            } else if (key === "MPG") { 
                 text = "Miles Per Gallon: " + props.props[key];
-            } else if (key === "luxury_scale") { // luxury
+            } else if (key === "luxury_scale") { 
                 text = "Luxury Scale (1-10): " + props.props[key];
-            }  else if (key === "saftey_rating") { // saftey
+            }  else if (key === "saftey_rating") { 
                 text = "Saftey Rating (1-5): " + props.props[key];
             }
             
@@ -49,15 +50,15 @@ export function CompareCardBody(props) {
 
         carDetailsArray = carDetailsArray.map((key, index) => {
             let text = "";
-            if(index === 0) { // category
+            if(index === 0) {
                 text = "Car Category: ?";
-            } else if (index === 1) { // price
+            } else if (index === 1) {
                 text = "Price: ?";
-            } else if (index === 2) { // mpg
+            } else if (index === 2) { 
                 text = "Miles Per Gallon: ?";
-            } else if (index === 3) { // luxury
+            } else if (index === 3) { 
                 text = "Luxury Scale (1-10): ?";
-            }  else if (index === 4) { // saftey
+            }  else if (index === 4) { 
                 text = "Saftey Rating (1-5): ?";
             }
 
