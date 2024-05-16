@@ -1,25 +1,14 @@
-
-import { useState } from "react";
-import { TopOfHomePage } from "./Home"
-
-
-
-
+import { Header } from "./Header";
 
 export default function MoreInformation(props) {
-    // const [getOneCardValue, setGetOneCardValue] = useState(0)
-    
-    // console.log(props.carData);
     //this is all temporary to get one data value while we are witing for routes
     let count = 0;
     const tempCardArray = props.carData.map( (carObject) => {
         if (count === 0) {
             count++;
             return carObject 
-            // setGetOneCardValue(1);
         }
     })
-    // console.log(tempCardArray)
     let newFilteredCardArrayRemovedUndefined = [];
     for (let individual_object in tempCardArray) {
         if (tempCardArray[individual_object] !== undefined) {
@@ -27,10 +16,6 @@ export default function MoreInformation(props) {
         }
     }
     const tempCarValue = tempCardArray[0];
-    // console.log("new array temp is: ", newFilteredCardArrayRemovedUndefined);
-    //simply call the .fields from tempCarValue.
-    // console.log("hii", tempCarValue);
-    
     
     //everything above this is temporary patch. 
     //below just replace tempCarValue with props.[field name] when get by JSON for the individual object
@@ -41,8 +26,8 @@ export default function MoreInformation(props) {
     const MPG = "MPG (combination freeway and city driving): " + tempCarValue.MPG;
     return (
         <main >
-            <TopOfHomePage/>
-            
+            <Header/>
+            {/* Creating the pill above with the car name with a color of red */}
             <button className={topButtonString} style={{fontSize: '1.5em', color: 'black', backgroundColor: 'rgb(249, 85, 115)'}}>{tempCarValue.car_name}</button>
             {/* Creation of the car image photo div code */}
             <div key={tempCarValue.car_name} className="containerHoldCardsColumn " >
@@ -50,18 +35,12 @@ export default function MoreInformation(props) {
                 <img src={tempCarValue.image} className="card-img-top increaseCarHeight" alt={tempCarValue.car_name}></img>
                 </div>
             </div>
-
-        
+            {/* Creation of the bottom two cards with the Left being the description of the car and the right being the fun facts of the car  */}
             <div className="containerHoldCardsColumn ">
-                {/* TODO ADD BACKGROUND COLOR THAT IS NICE OR SOMEWHAT UNDER STYLE */}
                 <div className="card border-dark" style={{ width: '18em', height: '18em'}} aria-label={tempCarValue.description}>
                     <h1 style={{fontSize: '1.5em', textAlign: 'center'}}>Description</h1>
                     <p className="card-text text-black " ><b>{tempCarValue.description}</b></p>
-
-                </div>
-
-                
-                {/* TODO ADD BACKGROUND COLOR THAT IS NICE OR SOMEWHAT UNDER STYLE maybe green */}
+                </div>    
                 <div className="card border-dark" style={{ width: '18em', height: '18em'}} aria-label={tempCarValue.description}>
                     <h1 style={{fontSize: '1.5em', textAlign: 'center'}}>Fun Facts</h1>
                     <p className="card-text text-black " ><b>{startingCarPrice}</b></p>
@@ -70,11 +49,6 @@ export default function MoreInformation(props) {
                     <p className="card-text text-black " ><b>{MPG}</b></p>
                 </div>
             </div>
-        
-            
-            
-            
-
         </main>
     //end of the return ()
     )
