@@ -30,13 +30,12 @@ export function CompareFilter(props) {
     // updates string to display
     const buttonDispaly = "Click to apply \"" + carCategory + "\""
 
-
     return(
         <div title={carCategory} className="comparison-searchPosition d-flex flex-column">
             <Dropdown as={ButtonGroup}>
                 <Button variant="primary" className="custom-button" onClick={handleCarInput}>{buttonDispaly}</Button>
                 <Dropdown.Toggle variant="primary" className="custom-button">
-                    Category
+                    {carCategory}
                 </Dropdown.Toggle>
                 
                 <Dropdown.Menu>
