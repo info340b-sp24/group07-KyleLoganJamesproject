@@ -45,6 +45,17 @@ ul.smallHide {
     display: none;
 }
 
+/* gives button dark border */
+.custom-button {
+    border-color: black;
+}
+
+/* gives button darker blue background when hovered */
+.custom-button:hover {
+    background-color: blue; 
+    border-color: black;
+}
+
 /* Custom CSS to extend dropdown menu */
 .navbar-collapse {
     background-color: rgb(249, 85, 115);
