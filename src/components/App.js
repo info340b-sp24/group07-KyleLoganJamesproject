@@ -24,9 +24,9 @@ function App(props) {
       {/* <insert car page /> */}
       <Header />
       <main>
-        {/* <CarUpload props={props.props}/> */}
+        <CarUpload props={props.props}/>
         {/* <Home carData={props.props}/> */}
-        <CompareApp props={props.props} />
+        {/* <CompareApp props={props.props} /> */}
         {/* <insert car page /> */}
       </main>
       <Footer />
