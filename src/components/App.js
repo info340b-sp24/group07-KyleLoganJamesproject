@@ -4,9 +4,9 @@ import Home from './Home';
 import MoreInformation from './Moreinformation.js';
 import { TopOfHomePage } from './Home.js';
 import { UploadImage } from './ImageUpload.js';
-// import { UploadInput } from './CarUpload.js';
 import { CompareApp } from './CompareApp.js';
 import { Footer } from './Footer.js'; 
+import { CarUpload } from './CarUpload.js';
 
 // add imports for each page
 
@@ -25,7 +25,7 @@ function App(props) {
       {/* <insert car page /> */}
       <Header />
       <main>
-        <UploadImage props={props} />
+        <CarUpload />
         {/* <UploadInput props={props} /> */}
         {/* <Home carData={props.props}/> */}
         {/* <CompareApp props={props} /> */}
