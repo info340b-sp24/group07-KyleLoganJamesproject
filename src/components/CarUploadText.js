@@ -1,6 +1,8 @@
 import React from 'react';
 import { CarUploadDirections } from './CarUploadDirections';
 
+// this is where you will define all of the forms for uploading to the car,
+// any extra components for the options should be rendered on this page
 export function CarUploadText(){
 
     return (
