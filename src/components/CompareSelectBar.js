@@ -4,8 +4,6 @@ export function CompareSelectBar(props) {
     const [car, setCar] = useState("")
     const [searchOrNot, setSearchOrNot] = useState(true);
 
-
-    // shows for all cars in our json file 
     const optionElems = props.props.map((cars, index) => {
         if(props.carCategory == "Unfiltered") {
             return <option key={index} value={cars.car_name}>{cars.car_name}</option>
@@ -16,8 +14,6 @@ export function CompareSelectBar(props) {
         }
     });
 
-
-    // updates car state and search bar state
     const handleCarInput = (event) => {
         const input = event.target.value;
         setCar(input);

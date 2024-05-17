@@ -74,7 +74,7 @@ export function CompareCardBody(props) {
         <div className="card-body">
             <img src={carImage} className="comparison-increaseCarHeight"
                 alt={altTag}></img>
-            {/* <!-- update to reflect the actual car searched up later --> */}
+            
             <h5 className="card-title">{carName}</h5>
 
             {/* <!-- List for car elements --> */}
