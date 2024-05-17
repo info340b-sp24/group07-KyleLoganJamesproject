@@ -22,6 +22,7 @@ export function CompareCardBody(props) {
         carName = props.props.car_name;
         carImage = props.props.image;
         altTag = props.props.description;
+        link =  props.props.link;
 
         carDetailsArray = keys.map((key, index) => {
             let text = "";

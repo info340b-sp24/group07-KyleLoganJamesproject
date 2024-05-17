@@ -5,7 +5,6 @@ import { CompareSelectBar } from './CompareSelectBar.js';
 
 
 export function CompareCard(props) {
-    // console.log(props)
 
     // string variables for card displays
     const cardNumber = "Car " + props.car;
@@ -17,7 +16,7 @@ export function CompareCard(props) {
     const [carCategory, setCarCategory] = useState("Unfiltered"); 
     
     // searches for a car in the json file
-    const searchedCar = props.props.props.props.filter((searchCar) => {
+    const searchedCar = props.props.filter((searchCar) => {
         return searchCar.car_name === car;
     });
 
@@ -43,13 +42,13 @@ export function CompareCard(props) {
             <form className="comparison-searchPosition d-flex flex-column">
                 <h2 className="comparison-searchCarTitle">{cardNumber}</h2>
 
-                <CompareFilter props={props} applyFilterCallback={applyFilter}/>
+                <CompareFilter props={props.props} applyFilterCallback={applyFilter}/>
 
                 <div className="text-left comparison-searchBar">
                     
                     
                     <div className="form-group mb-3 comparison-col-3">
-                        <CompareSelectBar carCategory={carCategory} props={props} cardVehicleNumber={cardVehicleNumber} cardSearchNumber={cardSearchNumber} car={car} applyCarCallBack={applyCar} applySearchCallBack={applySearch}/>
+                        <CompareSelectBar carCategory={carCategory} props={props.props} cardVehicleNumber={cardVehicleNumber} cardSearchNumber={cardSearchNumber} car={car} applyCarCallBack={applyCar} applySearchCallBack={applySearch}/>
                         
                         {/* <!-- the cards starts here, uses border-secondary to acheive black outline --> */}
                         <div className="card border-secondary">
