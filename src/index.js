@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import 'whatwg-fetch';
+import { BrowserRouter } from 'react-router-dom';
 
 
 // ADD JSON OBJECT IMPORT AND PASS INTO APP as a prop
@@ -13,8 +14,9 @@ import 'whatwg-fetch';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
-    <App props={carList} />
+    <BrowserRouter>
+      <App props={carList} />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

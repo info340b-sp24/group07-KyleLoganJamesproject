@@ -6,6 +6,7 @@ import { TopOfHomePage } from './Home.js';
 import { CompareApp } from './CompareApp.js';
 import { Footer } from './Footer.js'; 
 import { CarUpload } from './CarUpload.js';
+import { Routes, Route, Outlet } from "react-router-dom";
 
 // add imports for each page
 
@@ -16,18 +17,15 @@ function App(props) {
   return (
     <div className='container-fluid p-0'>
       
-      {/* <Header props={props} /> */}
-      {/* < home page/> */}
-      {/* <Home carData={props.props}/> */}
-      {/* <MoreInformation carData={props.props}/> */}
-      {/* <CompareApp props={props} /> */}
-      {/* <insert car page /> */}
+
       <Header />
       <main>
-        <CarUpload props={props.props}/>
-        {/* <Home carData={props.props}/> */}
-        {/* <CompareApp props={props.props} /> */}
-        {/* <insert car page /> */}
+      <Routes>
+        <Route index element={<Home carData={props.props}/>} />
+        <Route path="Compare" element={<CompareApp props={props.props} />}/>
+        <Route path="Upload" element={<CarUpload props={props.props} />}/>
+        <Route path="*" element={<Home carData={props.props}/>} />
+      </Routes>
       </main>
       <Footer />
     </div>
