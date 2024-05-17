@@ -8,11 +8,6 @@ import { Footer } from './Footer.js';
 import { CarUpload } from './CarUpload.js';
 import { Routes, Route } from "react-router-dom";
 
-// add imports for each page
-
-// the prop is the JSON object that is passed in from index.js
-// otherwise calls on all 3 pages and it will render which ever page
-// is not commented out
 function App(props) {
   return (
     <div className='container-fluid p-0'>

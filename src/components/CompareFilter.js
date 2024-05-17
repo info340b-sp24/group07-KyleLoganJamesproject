@@ -6,7 +6,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 export function CompareFilter(props) {
     const [carCategory, setCarCategory] = useState("Unfiltered");
 
-    // updates state
+  
     const handleFilterInput = (event) => {
         if(event.target.text === "Unfiltered") {
             setCarCategory("Unfiltered");
@@ -21,12 +21,12 @@ export function CompareFilter(props) {
         }
     }
 
-    // apply filter call back for CompareCard
+
     const handleCarInput = (event) => {
         props.applyFilterCallback(carCategory)
     }
 
-    // updates string to display
+    
     const buttonDispaly = "Click to apply \"" + carCategory + "\""
 
     return(
