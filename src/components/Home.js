@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function PrintAllCardInformation(props) {
+function CardInformation(props) {
     const displayCardArray = props.carData.map((individualCardObject) => {
         let colorButton = "";  
         if (individualCardObject.type === "Economy") {
@@ -85,7 +85,7 @@ function PrintAllCardInformation(props) {
     return displayCardArray
 }
 
-function DisplayFilteredCarsBasedOnYourInput(props) {
+function FilteredCars(props) {
     //method if user were to enter a car name in the search bar. ignores if user types upper or lowercase
     //words as it will return that car object specified by user.
     const filteredCardArrayWithUndefined = props.carData.map((carObject) => {
@@ -102,7 +102,7 @@ function DisplayFilteredCarsBasedOnYourInput(props) {
     }
     return (
          <div className="containerHoldCardsColumn">
-             <PrintAllCardInformation carData={newFilteredCardArrayRemovedUndefined} key={newFilteredCardArrayRemovedUndefined.car_name} />
+             <CardInformation carData={newFilteredCardArrayRemovedUndefined} key={newFilteredCardArrayRemovedUndefined.car_name} />
          </div>
     )
 }
@@ -131,7 +131,7 @@ export default function Home(props) {
                     <button type="button" className="changeButtonColor text-white text-center" onClick={handleClearButtonClick}>CLEAR</button>
                 </div>
             </form>
-            <DisplayFilteredCarsBasedOnYourInput userCarNameSearch={userCarNameSearch} carData={props.carData}/>
+            <FilteredCars userCarNameSearch={userCarNameSearch} carData={props.carData}/>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
