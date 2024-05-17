@@ -31,7 +31,7 @@ export function CompareCardBody(props) {
             if(key === "type") { 
                 text = "Car Category: " + props.props[key];
             } else if (key === "price") { 
-                text = "Price: " + props.props[key];
+                text = "Price: $" + props.props[key];
             } else if (key === "MPG") { 
                 text = "Miles Per Gallon: " + props.props[key];
             } else if (key === "luxury_scale") { 
