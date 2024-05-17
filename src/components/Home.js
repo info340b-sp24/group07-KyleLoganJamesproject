@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import {Footer} from './Footer.js'
-import { filter, update } from 'lodash';
-import MoreInformation from './Moreinformation.js';
-import { Header } from './Header.js';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function PrintAllCardInformation(props) {
     const displayCardArray = props.carData.map((individualCardObject) => {
-        //decide what color button it is
         let colorButton = "";  
         if (individualCardObject.type === "Economy") {
             colorButton = "economyButtonColor rounded-pill";
@@ -58,8 +54,7 @@ function PrintAllCardInformation(props) {
                         <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
                         </button>
                         <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
-                            {/* MUST CHANGE PATH BUT WE WILL LEARN HOW TO ROUTE TO NEW PAGES SOON. */}
-                            <a className="w-3 p-2 text-lg-center"  href={<MoreInformation carData={individualCardObject}/>} style={{ fontSize: '1.2em'  }}>More Info!</a>
+                            <Link className='w-3 p-2 text-lg-center' to='Moreinformation' state={{ carData: individualCardObject }}>More info!</Link>
                         </button>
                         <a target="_blank" href={individualCardObject.link} className="btn btn-primary">Official Webpage</a>
                     </div>
@@ -78,8 +73,7 @@ function PrintAllCardInformation(props) {
                         <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
                         </button>
                         <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
-                            {/* MUST CHANGE PATH BUT WE WILL LEARN HOW TO ROUTE TO NEW PAGES SOON. */}
-                            <a className="w-3 p-2 text-lg-center"  href={<MoreInformation carData={individualCardObject}/>} style={{ fontSize: '1.2em'  }}>More Info!</a>
+                            <Link className='w-3 p-2 text-lg-center' to='Moreinformation' state={{ carData: individualCardObject }}>More info!</Link>
                         </button>
                         <a target="_blank" href={individualCardObject.link} className="btn btn-primary">Official Webpage</a>
                     </div>
@@ -89,7 +83,6 @@ function PrintAllCardInformation(props) {
         return cardElement
     })
     return displayCardArray
-
 }
 
 function DisplayFilteredCarsBasedOnYourInput(props) {
@@ -126,7 +119,6 @@ export default function Home(props) {
     }
     return (
         <main>
-            {/* <Header/> */}
             {/* <!-- getting the user input for specific car name to filter based on their needs.--> */}
             <form >
                 <div className="form-group text-center p-3 textBox">
@@ -140,7 +132,6 @@ export default function Home(props) {
                 </div>
             </form>
             <DisplayFilteredCarsBasedOnYourInput userCarNameSearch={userCarNameSearch} carData={props.carData}/>
-            <Footer props={props}/>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
