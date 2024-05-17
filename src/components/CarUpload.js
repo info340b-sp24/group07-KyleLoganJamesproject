@@ -12,8 +12,8 @@ export function CarUpload (props) {
   return (
     <div className="d-flex justify-space-evenly">
     
-    <CarPicture props={props}/>
-    <CarUploadText props={props}/>
+      <CarPicture props={props}/>
+      <CarUploadText props={props}/>
 
         
     </div>
