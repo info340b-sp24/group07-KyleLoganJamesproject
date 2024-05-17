@@ -11,7 +11,7 @@ export function CarPicture(props) {
                     <h2>Choose a Picture</h2>
                     <form>
                         <div className="mb-3">
-                            <label for="formFile" className="form-label"></label>
+                            <label htmlFor="formFile" className="form-label"></label>
                             <input className="form-control" type="file" id="formFile"></input>
                         </div>
                     </form>
