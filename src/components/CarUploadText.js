@@ -72,7 +72,13 @@ export function CarUploadText(){
                 </div>
                 </form>
             </div>
+            <div className="col-md-6 right-section text-center">
+            <div className="col-md-6">
+                <h3 className="header-font">Description</h3>
+                <textarea className="form-control mb-3" placeholder="Enter car description" />
             </div>
+        </div>
+        </div>
             <div>
             <button className="btn btn-primary" type="upload">
                 <a className="text-white text-decoration-none" href="App.js">Upload</a>
