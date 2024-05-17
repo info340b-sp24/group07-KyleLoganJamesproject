@@ -27,6 +27,7 @@ function App(props) {
       <main>
         <CarUpload />
         {/* <UploadInput props={props} /> */}
+        {/* <UploadDetails props={props} /> */}
         {/* <Home carData={props.props}/> */}
         {/* <CompareApp props={props} /> */}
         {/* <insert car page /> */}
