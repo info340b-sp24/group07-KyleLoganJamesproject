@@ -126,7 +126,7 @@ export default function Home(props) {
     }
     return (
         <main>
-            <Header/>
+            {/* <Header/> */}
             {/* <!-- getting the user input for specific car name to filter based on their needs.--> */}
             <form >
                 <div className="form-group text-center p-3 textBox">
