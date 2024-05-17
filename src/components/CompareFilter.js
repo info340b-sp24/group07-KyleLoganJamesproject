@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 export function CompareFilter(props) {
-
     const [carCategory, setCarCategory] = useState("Unfiltered");
 
     // updates state

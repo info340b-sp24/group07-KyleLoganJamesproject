@@ -6,7 +6,7 @@ export function CompareSelectBar(props) {
 
 
     // shows for all cars in our json file 
-    const optionElems = props.props.props.props.props.map((cars, index) => {
+    const optionElems = props.props.map((cars, index) => {
         if(props.carCategory == "Unfiltered") {
             return <option key={index} value={cars.car_name}>{cars.car_name}</option>
         } else {
