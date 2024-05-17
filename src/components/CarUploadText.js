@@ -4,6 +4,26 @@ import { CarUploadDirections } from './CarUploadDirections';
 // this is where you will define all of the forms for uploading to the car,
 // any extra components for the options should be rendered on this page
 export function CarUploadText(){
+    const carTypes = ["Car Category", "Truck", "Sedan", "Sports", "Luxury", "SUV"];
+
+    const categoryOptions = carTypes.map((carType) => {
+        return (
+            <option value={carType}>{carType}</option>
+        )
+    });
+
+    const luxuryOptions = [<option value={"insert"}>{"Luxury Scale"}</option>];
+    for(let i = 1; i <= 10; i++){
+        luxuryOptions.push(<option value={i}>{i}</option>);
+    }
+
+    const safetyScale = [<option value={"insert"}>{"Safety Scale"}</option>];
+    for(let i = 1; i <= 5; i++){
+        safetyScale.push(<option value={i}>{i}</option>);
+    }
+
+
+
 
     return (
         <div className="col-md-6 right-section text-center">
@@ -19,12 +39,7 @@ export function CarUploadText(){
                 <div className="form-group">
                     <label className="header-font" htmlFor="carCategory">Car Category</label>
                     <select className="form-control mb-3" id="carCategory" name="carCategory">
-                    <option value="insert">Car Category</option>
-                    <option value="truck">Truck</option>
-                    <option value="sedan">Sedan</option>
-                    <option value="sports">Sports</option>
-                    <option value="luxury">Luxury</option>
-                    <option value="suv">SUV</option>
+                        {categoryOptions}
                     </select>
                 </div>
                 </form>
@@ -42,17 +57,7 @@ export function CarUploadText(){
                 <div className="form-group">
                     <label className="header-font" htmlFor="luxuryScale">Luxury Scale (1-10)</label>
                     <select className="form-control mb-3" id="luxuryScale" name="luxuryScale">
-                    <option value="insert">Luxury Scale</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+                    {luxuryOptions}
                     </select>
                 </div>
                 </form>
@@ -62,22 +67,17 @@ export function CarUploadText(){
                 <div className="form-group">
                     <label className="header-font" htmlFor="safetyScale">Safety Scale (1-5)</label>
                     <select className="form-control mb-3" id="safetyScale" name="safetyScale">
-                    <option value="insert">Safety Scale</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                        {safetyScale}
                     </select>
                 </div>
                 </form>
             </div>
-            <div className="col-md-6 right-section text-center">
-            <div className="col-md-6">
+
+            <div className="col-md-12">
                 <h3 className="header-font">Description</h3>
                 <textarea className="form-control mb-3" placeholder="Enter car description" />
             </div>
-        </div>
+
         </div>
             <div>
             <button className="btn btn-primary" type="upload">
