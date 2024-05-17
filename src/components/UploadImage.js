@@ -4,7 +4,7 @@ import React from 'react';
  * Need to create an API to add images into the json file
  * @returns UI for the user to choose a picture to upload
  */
-export const UploadImage = (props) => {
+export const uploadImage = (props) => {
     return (
         <div className="col-md-6">
             <section className="left-section text-center">

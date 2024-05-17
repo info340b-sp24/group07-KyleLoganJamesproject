@@ -3,8 +3,8 @@ import { Header } from './Header'; //import Header from Header.js
 import Home from './Home';
 import MoreInformation from './Moreinformation.js';
 import { TopOfHomePage } from './Home.js';
-import { UploadImage } from './ImageUpload.js';
-import { UploadDetails } from './CarDetailsUpload.js';
+import { uploadImage } from './ImageUpload.js';
+import { directionsUpload } from './UploadDirections.js';
 import { CompareApp } from './CompareApp.js';
 import { Footer } from './Footer.js'; 
 
