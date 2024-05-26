@@ -5,12 +5,15 @@ import { CarUploadText } from './CarUploadText';
 
 export function CarUpload (props) {
   return (
-    <div className="d-flex justify-space-evenly">
-    
-      <CarPicture props={props}/>
-      <CarUploadText props={props}/>
-
-        
-    </div>
+      <div className="flex-container">
+        <div className="row">
+          <div className="col-md-6">
+            <CarPicture props={props}/>
+          </div>
+          <div className="col-md-6">
+            <CarUploadText props={props}/>
+          </div>
+        </div>
+      </div>
   );
 }
