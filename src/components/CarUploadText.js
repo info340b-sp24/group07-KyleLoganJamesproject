@@ -77,7 +77,7 @@ export function CarUploadText(){
             </div>
             <div className="col-md-12">
                 <h3 className="header-font">Description</h3>
-                <textarea className="form-control mb-3" placeholder="Enter the Car Description" />
+                <textarea className="form-control mb-3" placeholder="Enter the Car's Description" />
             </div>
         </div>
             <div>
