@@ -1,5 +1,6 @@
 import React from 'react';
 import { CarUploadDirections } from './CarUploadDirections';
+import { getDatabase, ref } from 'firebase/database';
 
 // this is where you will define all of the forms for uploading to the car,
 // any extra components for the options should be rendered on this page
@@ -21,8 +22,6 @@ export function CarUploadText(){
     for(let i = 1; i <= 5; i++){
         safetyScale.push(<option value={i}>{i}</option>);
     }
-
-
 
 
     return (
@@ -72,12 +71,14 @@ export function CarUploadText(){
                 </div>
                 </form>
             </div>
-
+            <div className="col-md-12">
+                <h3 className="header-font">Webpage Link</h3>
+                <input type="text" className="form-control mb-3" placeholder="Paste the Webpage Link" />
+            </div>
             <div className="col-md-12">
                 <h3 className="header-font">Description</h3>
-                <textarea className="form-control mb-3" placeholder="Enter car description" />
+                <textarea className="form-control mb-3" placeholder="Enter the Car Description" />
             </div>
-
         </div>
             <div>
             <button className="btn btn-primary" type="upload">
