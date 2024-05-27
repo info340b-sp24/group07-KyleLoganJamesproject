@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { CarUploadDirections } from './CarUploadDirections';
+import { Alert } from 'react-bootstrap';
 import { getDatabase, ref, onValue, push as FirebasePush } from 'firebase/database';
+import { CarUploadDirections } from './CarUploadDirections';
 
 export function CarUploadText() {
     const carTypes = ["Car Category", "Truck", "Sedan", "Sports", "Luxury", "SUV"];
@@ -27,6 +28,7 @@ export function CarUploadText() {
     const [safetyState, setSafetyState] = useState("");
     const [webState, setWebState] = useState("");
     const [descState, setDescState] = useState("");
+    const [alertMessage, setAlertMessage] = useState(null);
 
     
     const handleCarNameChange = (event) => {
@@ -74,21 +76,28 @@ export function CarUploadText() {
     
     useEffect(() => {
 
+        // Returns a function that will "unregister" (turn off) the listener
         const offFunction = onValue(carDataRef, function(snapshot) {
-            const allCarDataObj = snapshot.val();
-            console.log(allCarDataObj);
-        });
-
+        const allCarDataObj = snapshot.val();
+        console.log(allCarDataObj);
+        
+        // Cleanup function for when component is removed
         function cleanup() {
             console.log("Component is being removed")
-            offFunction();
+            offFunction(); // Call the unregister function
         }
-        return cleanup;
+        return cleanup; // Effect hook callback returns the cleanup function
+        })
     }, [carDataRef]); // useEffect will run again once the value of carDataRef changes
 
     const addCar = (event) => {
         // Overrides the browser sending the form data to the current URL and refreshing the page
         event.preventDefault();
+        setAlertMessage(null);
+
+        if (!carState || !categoryState || !mghState || !priceState || !luxuryState || !safetyState || !webState || !descState) {
+            return setAlertMessage("Make sure the information below is completely filled! :)");
+        }
 
         const newUploadObj = {
             "car_name": carState,
@@ -102,12 +111,25 @@ export function CarUploadText() {
             "MPG": mghState
         };
 
-        FirebasePush(carDataRef, newUploadObj);
+        FirebasePush(carDataRef, newUploadObj)
+            .then(() => {
+                setAlertMessage("Car data Car data successfully uploaded!");
+                console.log("Car data successfully uploaded!");
+            })
+            .catch((error) => {
+                setAlertMessage(error.message);
+                console.log("Car data was not successfully uploaded!");
+            });
+
     };
 
     return (
         <div className="right-section text-center">
             <CarUploadDirections />
+            {/* display any error messages as dismissible alerts */}
+            {alertMessage &&
+                <Alert variant="danger" dismissible onClose={() => setAlertMessage(null)}>{alertMessage}</Alert>
+            }
             <div className="row">
                 <div className="col-md-6">
                     <h3 className="header-font">Car Name</h3>
@@ -156,9 +178,9 @@ export function CarUploadText() {
             </div>
             <div>
                 <form onSubmit={addCar}>
-                    <button className="btn btn-primary" type="upload">
-                        <a className="text-white text-decoration-none" href="App.js">Upload</a>
-                   </button>
+                    <button className="btn btn-primary" type="submit" href="App.js">
+                        Submit
+                    </button>
                 </form>
             </div>
         </div>
