@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Alert } from 'react-bootstrap';
 import { getDatabase, ref, onValue, push as FirebasePush } from 'firebase/database';
+import { Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { CarUploadDirections } from './CarUploadDirections';
 
 export function CarUploadText() {
@@ -90,15 +91,17 @@ export function CarUploadText() {
         })
     }, [carDataRef]); // useEffect will run again once the value of carDataRef changes
 
+    
+    const navigate = useNavigate(); // access navigate function
+    
     const addCar = (event) => {
-        // Overrides the browser sending the form data to the current URL and refreshing the page
         event.preventDefault();
         setAlertMessage(null);
-
+        
         if (!carState || !categoryState || !mghState || !priceState || !luxuryState || !safetyState || !webState || !descState) {
             return setAlertMessage("Make sure the information below is completely filled! :)");
         }
-
+        
         const newUploadObj = {
             "car_name": carState,
             "description": descState,
@@ -110,17 +113,18 @@ export function CarUploadText() {
             "safety_rating": safetyState,
             "MPG": mghState
         };
-
+        
         FirebasePush(carDataRef, newUploadObj)
-            .then(() => {
-                setAlertMessage("Car data Car data successfully uploaded!");
-                console.log("Car data successfully uploaded!");
-            })
-            .catch((error) => {
-                setAlertMessage(error.message);
-                console.log("Car data was not successfully uploaded!");
-            });
-
+        .then(() => {
+            setAlertMessage("Car data Car data successfully uploaded!");
+            console.log("Car data successfully uploaded!");
+        })
+        .catch((error) => {
+            setAlertMessage(error.message);
+            console.log("Car data was not successfully uploaded!");
+        });
+        
+            navigate("/App");
     };
 
     return (
