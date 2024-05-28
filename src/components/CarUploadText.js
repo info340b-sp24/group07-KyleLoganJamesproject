@@ -118,13 +118,13 @@ export function CarUploadText() {
         .then(() => {
             setAlertMessage("Car data Car data successfully uploaded!");
             console.log("Car data successfully uploaded!");
+            navigate("/App");
         })
         .catch((error) => {
             setAlertMessage(error.message);
             console.log("Car data was not successfully uploaded!");
         });
         
-            navigate("/App");
     };
 
     return (
