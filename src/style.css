@@ -46,6 +46,11 @@ ul.smallHide {
     display: none;
 }
 
+/* makes text bolded in nav bar when highlighed */
+nav .active {
+    font-weight: bold;
+}
+
 /* gives button dark border */
 .custom-button {
     border-color: black;
