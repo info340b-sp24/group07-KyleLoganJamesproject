@@ -182,7 +182,7 @@ export function CarUploadText() {
             </div>
             <div>
                 <form onSubmit={addCar}>
-                    <button className="btn btn-primary" type="submit" href="App.js">
+                    <button className="btn btn-primary" type="submit">
                         Submit
                     </button>
                 </form>
