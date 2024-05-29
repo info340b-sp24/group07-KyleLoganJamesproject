@@ -70,21 +70,18 @@ export function CarUploadText() {
         setDescState(newValue);
     }
     
-    const carDataUrl = "/";
 
     const db = getDatabase();
-    const carDataRef = ref(db, carDataUrl);
+    const carDataRef = ref(db, "Cars");
     
     useEffect(() => {
 
         // Returns a function that will "unregister" (turn off) the listener
         const offFunction = onValue(carDataRef, function(snapshot) {
         const allCarDataObj = snapshot.val();
-        console.log(allCarDataObj);
         
         // Cleanup function for when component is removed
         function cleanup() {
-            console.log("Component is being removed")
             offFunction(); // Call the unregister function
         }
         return cleanup; // Effect hook callback returns the cleanup function
@@ -117,12 +114,10 @@ export function CarUploadText() {
         FirebasePush(carDataRef, newUploadObj)
         .then(() => {
             setAlertMessage("Car data Car data successfully uploaded!");
-            console.log("Car data successfully uploaded!");
             navigate("/App");
         })
         .catch((error) => {
             setAlertMessage(error.message);
-            console.log("Car data was not successfully uploaded!");
         });
         
     };

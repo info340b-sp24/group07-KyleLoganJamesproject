@@ -5,7 +5,6 @@ import { CompareSelectBar } from './CompareSelectBar.js';
 
 
 export function CompareCard(props) {
-
     const cardNumber = "Car " + props.car;
     const cardSearchNumber = "Car #" + props.car;
     const cardVehicleNumber = "Search Vehicle " + props.car;
@@ -14,9 +13,14 @@ export function CompareCard(props) {
     const [searchOrNot, setSearchOrNot] = useState(false);
     const [carCategory, setCarCategory] = useState("Unfiltered"); 
     
-
-    const searchedCar = props.props.filter((searchCar) => {
-        return searchCar.car_name === car;
+    let searchedCar = {};
+    props.props.filter((searchCar) => {
+        searchCar.filter((eachCar, index) => {
+            if(eachCar.car_name === car){
+                console.log("eachCar: ", eachCar);
+                searchedCar = eachCar;
+            }
+        });
     });
 
   
@@ -50,7 +54,7 @@ export function CompareCard(props) {
                         <CompareSelectBar carCategory={carCategory} props={props.props} cardVehicleNumber={cardVehicleNumber} cardSearchNumber={cardSearchNumber} car={car} applyCarCallBack={applyCar} applySearchCallBack={applySearch}/>
                         
                         <div className="card border-secondary">
-                            <CompareCardBody props={searchedCar[0]} searched={searchOrNot}/>
+                            <CompareCardBody props={searchedCar} searched={searchOrNot}/>
                         </div>
 
                     </div>

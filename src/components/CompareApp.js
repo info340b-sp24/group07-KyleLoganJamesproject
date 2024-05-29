@@ -3,6 +3,7 @@ import { CompareImage } from './CompareImage.js';
 import { CompareCard } from './CompareCard.js'; 
 
 export function CompareApp(props) {
+    console.log("props in CompareApp: ", props.props)
     return (
         <div className="comparison-cardFlex d-lg-flex">
                 

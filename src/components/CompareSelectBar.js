@@ -1,21 +1,26 @@
 import React, { useState }from 'react';
 
 export function CompareSelectBar(props) {
+    // console.log("props in CompareSelectBar: ", props)
     const [car, setCar] = useState("")
     const [searchOrNot, setSearchOrNot] = useState(true);
 
-    const optionElems = props.props.map((cars, index) => {
-        if(props.carCategory == "Unfiltered") {
-            return <option key={index} value={cars.car_name}>{cars.car_name}</option>
-        } else {
-            if(cars.type.toLowerCase() === props.carCategory.toLowerCase()){
-                return <option key={index} value={cars.car_name}>{cars.car_name}</option>
+    const optionElems = props.props.map((cars) => {
+        const innerLoop = cars.map((car, index) => {
+            if(props.carCategory == "Unfiltered") {
+                return <option key={index} value={car.car_name}>{car.car_name}</option>
+            } else {
+                if(car.type.toLowerCase() === props.carCategory.toLowerCase()){
+                    return <option key={index} value={car.car_name}>{car.car_name}</option>
+                }
             }
-        }
+        });
+        return innerLoop;
     });
 
     const handleCarInput = (event) => {
         const input = event.target.value;
+        console.log("input in handleCarInput: ", input);
         setCar(input);
 
 
