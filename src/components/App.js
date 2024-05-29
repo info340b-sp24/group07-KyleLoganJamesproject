@@ -21,9 +21,6 @@ function App(props) {
   
   useEffect(() => {
     const offFunction = onValue(carRef, (snapshot) =>{
-      const newMessageObj = snapshot.val();
-      console.log(newMessageObj);
-
 
       const allCars = snapshot.val();
       const allKeys = Object.keys(allCars);
@@ -45,12 +42,6 @@ function App(props) {
     })
   }, []);
 
-  // console.log(data);
-  // console.log("props in App: ", props.props);
-
-  
-
-
 
   return (
     <div className='container-fluid p-0'>
@@ -61,9 +52,9 @@ function App(props) {
       <Routes>
         <Route index element={<Home carData={props.props}/>} />
         <Route path="Compare" element={<CompareApp props={data} />}/>
-        <Route path="Upload" element={<CarUpload props={props.props} />}/>
-        <Route path="Moreinformation" element={<MoreInformation carData={props.props}/>}/>
-        <Route path="*" element={<Home carData={props.props}/>} />
+        <Route path="Upload" element={<CarUpload props={data} />}/>
+        <Route path="Moreinformation" element={<MoreInformation carData={data}/>}/>
+        <Route path="*" element={<Home carData={data}/>} />
       </Routes>
       </main>
       <Footer />
