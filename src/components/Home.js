@@ -89,25 +89,43 @@ function FilteredCars(props) {
     //method if user were to enter a car name in the search bar. ignores if user types upper or lowercase
     //words as it will return that car object specified by user.
     const filteredCardArrayWithUndefined = props.carData.map((carObject) => {
-        if (carObject.car_name.toLowerCase().includes(props.userCarNameSearch.toLowerCase()) === true){
-            return carObject
-        }   
+        console.log("carObject: ", carObject);
+        const innerLoop = carObject.map((car) => {
+            if (car.car_name.toLowerCase().includes(props.userCarNameSearch.toLowerCase()) === true){
+                return car;
+            }   
+        });
+        return innerLoop;
     });
-    //filter the cards that are undefined 
-    let newFilteredCardArrayRemovedUndefined = [];
-    for (let individual_object in filteredCardArrayWithUndefined) {
-        if (filteredCardArrayWithUndefined[individual_object] !== undefined) {
-            newFilteredCardArrayRemovedUndefined.push(filteredCardArrayWithUndefined[individual_object]);
-        }
+
+    console.log("filteredCardArrayWithUndefined: ", filteredCardArrayWithUndefined);
+
+    // //filter the cards that are undefined 
+    // let newFilteredCardArrayRemovedUndefined = [];
+    // for (let individual_object in filteredCardArrayWithUndefined) {
+    //     if (filteredCardArrayWithUndefined[individual_object] !== undefined) {
+    //         newFilteredCardArrayRemovedUndefined.push(filteredCardArrayWithUndefined[individual_object]);
+    //     }
+    // }
+    // console.log("newFilteredCardArrayRemovedUndefined: ", newFilteredCardArrayRemovedUndefined);
+    let filteredArray = [];
+    if(filteredCardArrayWithUndefined[0] !== undefined) {
+        filteredArray = filteredCardArrayWithUndefined[0].filter((carObject) => {
+            return carObject !== undefined;
+        });
     }
+
+    console.log("filteredArray: ", filteredArray);
+
     return (
          <div className="containerHoldCardsColumn">
-             <CardInformation carData={newFilteredCardArrayRemovedUndefined} key={newFilteredCardArrayRemovedUndefined.car_name} />
+             <CardInformation carData={filteredArray} key={filteredCardArrayWithUndefined.car_name} />
          </div>
     )
 }
 
 export default function Home(props) {
+    // console.log("props in Home: ", props.carData);
     const [userCarNameSearch, setUserCarnameSearch] = useState('');
     const handleChange =  (event) => {
         const value = event.target.value;
