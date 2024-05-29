@@ -34,7 +34,7 @@ footer {
     padding-left: .5rem;
     margin-top: auto;
     margin-left: .5rem;
-    color:  #F95573;
+    color: #F95573;
     font-family: 'Roboto', sans-serif;
     bottom: 0;
     width: 100%;
@@ -44,6 +44,11 @@ footer {
 /* hides small drop down when screen is big  */
 ul.smallHide {
     display: none;
+}
+
+/* makes text bolded in nav bar when highlighed */
+nav .active {
+    font-weight: bold;
 }
 
 /* gives button dark border */

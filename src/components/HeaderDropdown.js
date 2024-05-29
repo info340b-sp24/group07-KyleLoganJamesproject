@@ -1,8 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export function HeaderDropdown(props) {
     const links = props.props.map((link, index) => {
-        return <a key={index} className="nav-link active text-dark fs-2" aria-current={link} href={link}>{link}</a>
+        return <li><NavLink to={"/"+link} key={index}className="nav-link text-dark fs-2" aria-current={link}>{link}</NavLink></li>
+        
     });
 
     return (
