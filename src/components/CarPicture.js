@@ -1,8 +1,8 @@
 import React from 'react';
-import { CarUploadText } from './CarUploadText';
 
 // add a picture of a car to the page
 export function CarPicture(props) {
+    // TODO: upload a photo to storage and save the URL to the database
 
   return (
         <div className="left-section text-center">
