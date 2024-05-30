@@ -50,7 +50,7 @@ function App(props) {
       <Header />
       <main>
       <Routes>
-        <Route index element={<Home carData={props.props}/>} />
+        <Route index element={<Home carData={data}/>} />
         <Route path="Compare" element={<CompareApp props={data} />}/>
         <Route path="Upload" element={<CarUpload props={data} />}/>
         <Route path="Moreinformation" element={<MoreInformation carData={data}/>}/>
