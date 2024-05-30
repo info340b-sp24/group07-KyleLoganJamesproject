@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 function CardInformation(props) {
     const displayCardArray = props.carData.map((individualCardObject) => {
         let colorButton = "";  
@@ -87,9 +86,8 @@ function CardInformation(props) {
 
 function FilteredCars(props) {
     //method if user were to enter a car name in the search bar. ignores if user types upper or lowercase
-    //words as it will return that car object specified by user.
+    //words as it will return that car object specified by user. 
     const filteredCardArrayWithUndefined = props.carData.map((carObject) => {
-        console.log("carObject: ", carObject);
         const innerLoop = carObject.map((car) => {
             if (car.car_name.toLowerCase().includes(props.userCarNameSearch.toLowerCase()) === true){
                 return car;
@@ -97,35 +95,35 @@ function FilteredCars(props) {
         });
         return innerLoop;
     });
-
-    console.log("filteredCardArrayWithUndefined: ", filteredCardArrayWithUndefined);
-
-    // //filter the cards that are undefined 
-    // let newFilteredCardArrayRemovedUndefined = [];
-    // for (let individual_object in filteredCardArrayWithUndefined) {
-    //     if (filteredCardArrayWithUndefined[individual_object] !== undefined) {
-    //         newFilteredCardArrayRemovedUndefined.push(filteredCardArrayWithUndefined[individual_object]);
-    //     }
-    // }
-    // console.log("newFilteredCardArrayRemovedUndefined: ", newFilteredCardArrayRemovedUndefined);
-    let filteredArray = [];
-    if(filteredCardArrayWithUndefined[0] !== undefined) {
-        filteredArray = filteredCardArrayWithUndefined[0].filter((carObject) => {
-            return carObject !== undefined;
-        });
+    //The new props data is a 2D array and our CardInformation only accepts 1D array so we must do filtering to reduce a 2D to a 1D array.
+    //convert the 2d array into a 1d array and pass that into card information method. 
+    //first, access the first index of the 2D array which is an array of objects. 
+    let newFilteredCardArrayRemovedUndefined = [];
+    for (let outer2dObject in filteredCardArrayWithUndefined) {
+        for (let individualCarCard in filteredCardArrayWithUndefined[outer2dObject]) {
+            //push the current car object into the 2d array 
+            newFilteredCardArrayRemovedUndefined[outer2dObject] = newFilteredCardArrayRemovedUndefined.push(filteredCardArrayWithUndefined[outer2dObject][individualCarCard]);
+        }
     }
-
-    console.log("filteredArray: ", filteredArray);
-
+    //now it is a 1D array, we need to remove the first element from firebase because it does not have any valuable content.
+    //remove first element that has nothing. 
+    newFilteredCardArrayRemovedUndefined.shift(); 
+    //now we have all card values we want, we can just push that car card so we have a final filtered car array that is based on user input.
+    let eliminateUnrefinedArray = [];
+    for (let individualCar in newFilteredCardArrayRemovedUndefined) {
+        if (newFilteredCardArrayRemovedUndefined[individualCar] !== undefined) {
+            eliminateUnrefinedArray.push(newFilteredCardArrayRemovedUndefined[individualCar]);
+        }
+    }
+    //now you have 1D array with card objects, just pass to card information with its key being the car name and display to user.
     return (
-         <div className="containerHoldCardsColumn">
-             <CardInformation carData={filteredArray} key={filteredCardArrayWithUndefined.car_name} />
-         </div>
+        <div className="containerHoldCardsColumn">
+            <CardInformation carData={eliminateUnrefinedArray} key={eliminateUnrefinedArray.car_name} />
+        </div>
     )
 }
 
 export default function Home(props) {
-    // console.log("props in Home: ", props.carData);
     const [userCarNameSearch, setUserCarnameSearch] = useState('');
     const handleChange =  (event) => {
         const value = event.target.value;
