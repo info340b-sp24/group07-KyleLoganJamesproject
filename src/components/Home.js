@@ -95,9 +95,6 @@ function FilteredCars(props) {
         });
         return innerLoop;
     });
-    //The new props data is a 2D array and our CardInformation only accepts 1D array so we must do filtering to reduce a 2D to a 1D array.
-    //convert the 2d array into a 1d array and pass that into card information method. 
-    //first, access the first index of the 2D array which is an array of objects. 
     let newFilteredCardArrayRemovedUndefined = [];
     for (let outer2dObject in filteredCardArrayWithUndefined) {
         for (let individualCarCard in filteredCardArrayWithUndefined[outer2dObject]) {
