@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export function HeaderDropdown(props) {
     const links = props.props.map((link, index) => {
-        return <li><NavLink to={"/"+link} key={index}className="nav-link text-dark fs-2" aria-current={link}>{link}</NavLink></li>
+        return <NavLink to={"/"+link} key={index}className="nav-link text-dark fs-2" aria-current={link}>{link}</NavLink>
         
     });
 
