@@ -7,17 +7,14 @@ import { CompareApp } from './CompareApp.js';
 import { Footer } from './Footer.js'; 
 import { CarUpload } from './CarUpload.js';
 import { Routes, Route } from "react-router-dom";
-import { getDatabase, ref, set as firebaseSet, onValue, get } from 'firebase/database';
+import { getDatabase, ref, onValue } from 'firebase/database';
 
 function App(props) {
-
-  const [currentCars, setCurrentCars] = useState([props.props])
 
   const [data, setData] = useState([]);
 
   const db = getDatabase();
   const carRef = ref(db, "Cars");
-  // console.log("messageRef: ", carRef)
   
   useEffect(() => {
     const offFunction = onValue(carRef, (snapshot) =>{
@@ -33,7 +30,7 @@ function App(props) {
 
 
      const updateCars = [...data, carArray];
-     setData(updateCars); //update state and re-render
+     setData(updateCars);
     
      function cleanup() {
       offFunction();
