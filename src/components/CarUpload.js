@@ -8,6 +8,7 @@ export function CarUpload (props) {
   function applyImageFile(imageFile) {
     setImageFile(imageFile);
   }
+  
   return (
       <div className="flex-container">
         <div className="row">
