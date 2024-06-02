@@ -72,8 +72,7 @@ export function CompareCardBody(props) {
 
     return (
         <div className="card-body">
-            <img src={carImage} className="comparison-increaseCarHeight"
-                alt={altTag}></img>
+            <img src={carImage} className="comparison-increaseCarHeight" alt={altTag}></img>
             
             <h5 className="card-title">{carName}</h5>
 

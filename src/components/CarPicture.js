@@ -2,7 +2,6 @@ import React, { useState, useId, useEffect } from 'react';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 export function CarPicture(props) {
-  const [imageFile, setImageFile] = useState(null);
   const initialURL = "page_images/upload-car.png";
   const [imageUrl, setImageUrl] = useState(initialURL);
   const pictureId = useId();
@@ -14,9 +13,10 @@ export function CarPicture(props) {
   const handleChange = async (event) => {
     if (event.target.files.length > 0 && event.target.files[0]) {
       const imageFile = event.target.files[0];
-      setImageFile(imageFile);
+      console.log(imageFile);
+      console.log("pic id: ", pictureId)
 
-      const imageURL = `userImages/${pictureId}.png`;
+      const imageURL = "userImages/"+pictureId+".png";
       const storage = getStorage();
       const imageRef = ref(storage, imageURL);
 
@@ -27,7 +27,6 @@ export function CarPicture(props) {
   };
 
   const handleClear = (event) => {
-    setImageFile(null);
     setImageUrl(initialURL);
   };
 
@@ -46,7 +45,7 @@ return (
             <div className="row mt-3">
                 <div className="col d-flex justify-content-center">
                     <form onClick={handleClear}>
-                        <button className="btn btn-secondary" type="clear" textValue="Clear button">
+                        <button className="btn btn-secondary" type="clear" textvalue="Clear button">
                         Clear Picture
                         </button>
                     </form>
