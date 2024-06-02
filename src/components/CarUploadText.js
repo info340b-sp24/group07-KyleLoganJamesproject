@@ -79,19 +79,17 @@ export function CarUploadText(props) {
     
     useEffect(() => {
 
-        // Returns a function that will "unregister" (turn off) the listener
         const offFunction = onValue(carDataRef, function(snapshot) {
         
-        // Cleanup function for when component is removed
         function cleanup() {
-            offFunction(); // Call the unregister function
+            offFunction(); 
         }
-        return cleanup; // Effect hook callback returns the cleanup function
+        return cleanup;
         })
-    }, [carDataRef]); // useEffect will run again once the value of carDataRef changes
+    }, [carDataRef]); 
 
     
-    const navigate = useNavigate(); // access navigate function
+    const navigate = useNavigate();
     
     const addCar = (event) => {
         event.preventDefault();
