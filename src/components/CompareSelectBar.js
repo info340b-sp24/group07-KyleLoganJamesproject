@@ -1,7 +1,6 @@
 import React, { useState }from 'react';
 
 export function CompareSelectBar(props) {
-    // console.log("props in CompareSelectBar: ", props)
     const [car, setCar] = useState("")
     const [searchOrNot, setSearchOrNot] = useState(true);
 

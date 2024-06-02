@@ -14,8 +14,7 @@ export function CompareCardBody(props) {
         "?",
         "?",
     ];
-
-    // this updates the text being displayed for the car
+    
     if(props.searched) {
         const keys = Object.keys(props.props);
         console.log(props.props.car_name);
