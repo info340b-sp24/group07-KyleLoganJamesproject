@@ -51,7 +51,7 @@ export function CarPicture(props) {
             <input className="form-control" type="file" id="formFile" onChange={handleChange} />
           </div>
         </form>
-        {error && ( <Alert variant="danger">{error}</Alert>)}
+        {error && ( <Alert variant="danger">{error} -Please try a new image</Alert>)}
         <div className="card-body" aria-label="image icon uploading a car">
           {loading ? ( <Spinner animation="border" role="status" alt="Loading..."> <span className="sr-only">Loading...</span></Spinner>):(
             <img src={imageUrl} className="border border-secondary img-fluid" alt="user avatar preview" />
@@ -60,7 +60,7 @@ export function CarPicture(props) {
         <div className="row mt-3">
           <div className="col d-flex justify-content-center">
             <form onClick={handleClear}>
-              <button className="btn btn-secondary" type="clear" textvalue="Clear button">
+              <button className="btn btn-secondary" type="clear" aria-label="Clear button" textvalue="Clear button">
                 Clear Picture
               </button>
             </form>
