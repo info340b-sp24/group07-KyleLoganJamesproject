@@ -15,7 +15,7 @@ export function CarUpload (props) {
             <CarPicture props={props} applyCallBack={applyImageFile}/>
           </div>
           <div className="col-md-6">
-          <CarUploadText imageFile={imageFile}/>
+            <CarUploadText imageFile={imageFile}/>
           </div>
         </div>
       </div>

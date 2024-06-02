@@ -46,7 +46,7 @@ return (
             <div className="row mt-3">
                 <div className="col d-flex justify-content-center">
                     <form onClick={handleClear}>
-                        <button className="btn btn-secondary" type="clear">
+                        <button className="btn btn-secondary" type="clear" textValue="Clear button">
                         Clear Picture
                         </button>
                     </form>

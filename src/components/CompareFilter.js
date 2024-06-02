@@ -32,7 +32,7 @@ export function CompareFilter(props) {
     return(
         <div title={carCategory} className="comparison-searchPosition d-flex flex-column">
             <Dropdown as={ButtonGroup}>
-                <Button variant="primary" className="custom-button" onClick={handleCarInput}>{buttonDispaly}</Button>
+                <Button variant="primary" className="custom-button" aria-label="Apply filter" onClick={handleCarInput}>{buttonDispaly}</Button>
                 <Dropdown.Toggle variant="primary" className="custom-button">
                     {carCategory}
                 </Dropdown.Toggle>

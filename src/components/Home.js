@@ -7,7 +7,7 @@ function CardInformation(props) {
         if (individualCardObject.type === "Economy") {
             colorButton = "economyButtonColor rounded-pill";
         } else if (individualCardObject.type === "Sport") {
-            colorButton = "sportButtonColor rounded-pill d-flex align-items-center";
+            colorButton = "sportButtonColor rounded-pill";
         } else if (individualCardObject.type === "SUV") {
             colorButton = "suvButtonColor rounded-pill";
         } else {
@@ -35,23 +35,16 @@ function CardInformation(props) {
         } else {
             personFavoriteCar = individualCardObject.description;
         }
-        //if it is a sport, add a sound clip button. Otherwise, display normal card.
-        let cardElement = undefined;
-        if (individualCardObject.type === "Sport") {
-            cardElement = 
+
+        let cardElement = 
             //unique key will be the car name 
             <div key={individualCardObject.car_name} className="containerHoldCardsColumn">
                 <div className="card" style={{ width: '18rem'}} aria-label={individualCardObject.description} >
                     <img src={individualCardObject.image} className="card-img-top increaseCarHeight" alt={individualCardObject.car_name}></img>
                     <div className="card-body">
-                        <h1 className="card-title display-6">{individualCardObject.car_name}</h1>
+                        <h1 className="card-title display-6" aria-label={individualCardObject.car_name}>{individualCardObject.car_name}</h1>
                         <div className="card-text text-black">{personFavoriteCar}</div>
-                        <button className={colorButton}>{individualCardObject.type}</button>
-                        <button className="sportButtonColorSound rounded-pill "> 
-                            <a  target="_blank" href={individualCardObject.sound_clip}>Sound Clip</a>
-                        </button>
-                        <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
-                        </button>
+                        <button className={colorButton} aria-label={individualCardObject.type}>{individualCardObject.type}</button>
                         <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
                             <Link className='w-3 p-2 text-lg-center' to='Moreinformation' state={{ carData: individualCardObject }}>More info!</Link>
                         </button>
@@ -59,27 +52,7 @@ function CardInformation(props) {
                     </div>
                 </div>
             </div>
-        } else {
-            cardElement = 
-            //unique key will be the car name 
-            <div key={individualCardObject.car_name} className="containerHoldCardsColumn">
-                <div className="card" style={{ width: '18rem'}} aria-label={individualCardObject.description} >
-                    <img src={individualCardObject.image} className="card-img-top increaseCarHeight" alt={individualCardObject.car_name}></img>
-                    <div className="card-body">
-                        <h1 className="card-title display-6">{individualCardObject.car_name}</h1>
-                        <div className="card-text text-black">{personFavoriteCar}</div>
-                        <button className={colorButton}>{individualCardObject.type}</button>
-                        <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
-                        </button>
-                        <button className="badge badge-pill badge-dark rounded-pill m-2 w-4 p-2">
-                            <Link className='w-3 p-2 text-lg-center' to='Moreinformation' state={{ carData: individualCardObject }}>More info!</Link>
-                        </button>
-                        <a target="_blank" href={individualCardObject.link} className="btn btn-primary">Official Webpage</a>
-                    </div>
-                </div>
-            </div>
-        }
-        return cardElement
+        return cardElement;
     })
     return displayCardArray
 }

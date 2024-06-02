@@ -82,7 +82,7 @@ export function CompareCardBody(props) {
                 {carDetailsArray}
             </ul>
 
-            <a href={link} className="btn btn-primary">Official Webpage</a>
+            <a href={link} alt="link to car website" className="btn btn-primary">Official Webpage</a>
         </div>
     )   
 }

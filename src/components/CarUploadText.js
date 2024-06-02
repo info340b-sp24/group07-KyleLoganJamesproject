@@ -178,7 +178,7 @@ export function CarUploadText(props) {
             </div>
             <div>
                 <form onSubmit={addCar}>
-                    <button className="btn btn-primary" type="submit">
+                    <button className="btn btn-primary" aria-label="Submit" type="submit">
                         Submit Directions
                     </button>
                 </form>
