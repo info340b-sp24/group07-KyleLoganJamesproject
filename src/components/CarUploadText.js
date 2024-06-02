@@ -142,7 +142,7 @@ export function CarUploadText(props) {
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <h3 className="header-font">Mile Per Gallon (MPG)</h3>
+                    <h3 className="header-font">Mile Per Gallon</h3>
                     <input type="text" className="form-control mb-3" placeholder="MPG" value={mghState} onChange={handleMghChange} />
                 </div>
                 <div className="col-md-6">
