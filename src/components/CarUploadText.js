@@ -112,7 +112,6 @@ export function CarUploadText(props) {
             "safety_rating": safetyState,
             "MPG": mghState
         };
-        console.log(newUploadObj);
         FirebasePush(carDataRef, newUploadObj)
         .then(() => {
             setAlertMessage("Car data Car data successfully uploaded!");

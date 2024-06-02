@@ -9,25 +9,22 @@ export function CarPicture(props) {
 
   useEffect(() => {
     props.applyCallBack(imageUrl);
-  }, [imageUrl, props]);
+  }, [imageUrl, props.applyCallBack]);
 
   const handleChange = async (event) => {
     if (event.target.files.length > 0 && event.target.files[0]) {
       const imageFile = event.target.files[0];
+      setImageFile(imageFile);
 
       const imageURL = `userImages/${pictureId}.png`;
-      
-      console.log("Uploading", imageFile);
       const storage = getStorage();
       const imageRef = ref(storage, imageURL);
+
       await uploadBytes(imageRef, imageFile);
       const downloadUrlString = await getDownloadURL(imageRef);
-      setImageUrl(downloadUrlString); 
-      
-      setImageFile(imageFile);
-      setImageUrl(URL.createObjectURL(imageFile));
+      setImageUrl(downloadUrlString);
     }
-};
+  };
 
   const handleClear = (event) => {
     setImageFile(null);
