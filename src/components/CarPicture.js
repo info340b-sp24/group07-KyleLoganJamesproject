@@ -9,6 +9,13 @@ export function CarPicture(props) {
   const [error, setError] = useState(null);
   const pictureId = useId();
 
+  const handleClear = (event) => {
+    setLoading(true); 
+    setImageUrl(initialURL);
+    setLoading(false);
+    setError(null);
+  };
+  
   useEffect(() => {
     props.applyCallBack(imageUrl);
   }, [imageUrl, props.applyCallBack]);
@@ -35,32 +42,27 @@ export function CarPicture(props) {
     }
   };
 
-  const handleClear = (event) => {
-    setLoading(true); 
-    setImageUrl(initialURL);
-    setLoading(false);
-    setError(null);
-  };
-
   return (
     <div className="left-section text-center">
       <div className="row">
         <h2>Choose a Picture</h2>
-        <form>
-          <div className="mb-3">
-            <input className="form-control" type="file" id="formFile" onChange={handleChange} />
-          </div>
-        </form>
-        {error && ( <Alert variant="danger">{error} -Please try a new image</Alert>)}
-        <div className="card-body" aria-label="image icon uploading a car">
-          {loading ? ( <Spinner animation="border" role="status" alt="Loading..."> <span className="sr-only">Loading...</span></Spinner>):(
+        <div className="mb-3">
+          <input className="form-control" type="file" id="formFile" onChange={handleChange} />
+        </div>
+        {error && <Alert variant="danger">{error} - Please try a new image</Alert>}
+        <div className="card-body" aria-live="polite" aria-label="image icon uploading a car">
+          {loading ? (
+            <Spinner animation="border" role="status">
+              <span className="sr-only">Loading...</span>
+            </Spinner>
+          ) : (
             <img src={imageUrl} className="border border-secondary img-fluid" alt="user avatar preview" />
           )}
         </div>
         <div className="row mt-3">
           <div className="col d-flex justify-content-center">
-            <form onClick={handleClear}>
-              <button className="btn btn-secondary" type="clear" aria-label="Clear button" textvalue="Clear button">
+            <form onClick={handleClear} label="clear vehicle">
+              <button className="btn btn-secondary" type="button" aria-label="Clear button">
                 Clear Picture
               </button>
             </form>
