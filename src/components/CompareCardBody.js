@@ -14,10 +14,9 @@ export function CompareCardBody(props) {
         "?",
         "?",
     ];
-    
+
     if(props.searched) {
         const keys = Object.keys(props.props);
-        console.log(props.props.car_name);
         carName = props.props.car_name;
         carImage = props.props.image;
         altTag = props.props.description;

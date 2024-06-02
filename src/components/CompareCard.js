@@ -17,7 +17,6 @@ export function CompareCard(props) {
     props.props.filter((searchCar) => {
         searchCar.filter((eachCar, index) => {
             if(eachCar.car_name === car){
-                console.log("eachCar: ", eachCar);
                 searchedCar = eachCar;
             }
         });
