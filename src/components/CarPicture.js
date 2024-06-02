@@ -52,7 +52,7 @@ export function CarPicture(props) {
         {error && <Alert variant="danger">{error} - Please try a new image</Alert>}
         <div className="card-body" aria-live="polite" aria-label="image icon uploading a car">
           {loading ? (
-            <Spinner animation="border" role="status">
+            <Spinner animation="border" role="status" aria-label='Loading...'>
               <span className="sr-only">Loading...</span>
             </Spinner>
           ) : (
