@@ -15,7 +15,7 @@ export function CarPicture(props) {
       const imageFile = event.target.files[0];
       console.log(imageFile);
       console.log("pic id: ", pictureId)
-
+      
       const imageURL = "userImages/"+pictureId+".png";
       const storage = getStorage();
       const imageRef = ref(storage, imageURL);
@@ -27,7 +27,12 @@ export function CarPicture(props) {
   };
 
   const handleClear = (event) => {
-    setImageUrl(initialURL);
+    setImageUrl(prevImageUrl => {
+      if (prevImageUrl !== initialURL) {
+        return initialURL;
+      }
+      return prevImageUrl;
+    });
   };
 
 return (
