@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { CarUploadDirections } from './CarUploadDirections';
 
 export function CarUploadText(props) {
+    
     const carTypes = ["Car Category", "Truck", "Sedan", "Sports", "Luxury", "SUV"];
 
     const categoryOptions = carTypes.map((carType, index) => (
@@ -31,7 +32,7 @@ export function CarUploadText(props) {
     const [descState, setDescState] = useState("");
     const [alertMessage, setAlertMessage] = useState(null);
     
-    const imageUrl = props.imageUrl;
+    const imageUrl = props.imageFile;
 
     
     const handleCarNameChange = (event) => {
@@ -111,7 +112,7 @@ export function CarUploadText(props) {
             "safety_rating": safetyState,
             "MPG": mghState
         };
-        
+        console.log(newUploadObj);
         FirebasePush(carDataRef, newUploadObj)
         .then(() => {
             setAlertMessage("Car data Car data successfully uploaded!");

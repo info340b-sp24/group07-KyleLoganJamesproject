@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CarPicture } from './CarPicture';
 import { CarUploadText } from './CarUploadText';
 
-// CarUpload acts as the parent-component to child-components CarPicture and CarUploadText
-// Easier to format together than individually
 export function CarUpload (props) {
+  const [imageFile, setImageFile] = useState(null);
+
+  function applyImageFile(imageFile) {
+    setImageFile(imageFile);
+  }
   return (
       <div className="flex-container">
         <div className="row">
           <div className="col-md-6">
-            <CarPicture props={props}/>
+            <CarPicture props={props} applyCallBack={applyImageFile}/>
           </div>
           <div className="col-md-6">
-          <CarUploadText imageUrl={props.imageUrl}/>
+          <CarUploadText imageFile={imageFile}/>
           </div>
         </div>
       </div>

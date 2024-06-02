@@ -1,45 +1,35 @@
-import React, { useState, useId } from 'react';
+import React, { useState, useId, useEffect } from 'react';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-export function CarPicture() {
+export function CarPicture(props) {
   const [imageFile, setImageFile] = useState(null);
   const initialURL = "page_images/upload-car.png";
   const [imageUrl, setImageUrl] = useState(initialURL);
   const pictureId = useId();
 
-  // Image uploading!
-  const handleChange = (event) => {
+  useEffect(() => {
+    props.applyCallBack(imageUrl);
+  }, [imageUrl, props]);
+
+  const handleChange = async (event) => {
     if (event.target.files.length > 0 && event.target.files[0]) {
       const imageFile = event.target.files[0];
+
+      const imageURL = `userImages/${pictureId}.png`;
+      
+      console.log("Uploading", imageFile);
+      const storage = getStorage();
+      const imageRef = ref(storage, imageURL);
+      await uploadBytes(imageRef, imageFile);
+      const downloadUrlString = await getDownloadURL(imageRef);
+      setImageUrl(downloadUrlString); 
+      
       setImageFile(imageFile);
       setImageUrl(URL.createObjectURL(imageFile));
     }
 };
 
-const handleImageUpload = async () => {
-    if (!imageFile) {
-        console.error("No image file selected");
-        return;
-    }
-
-    const imageURL = `userImages/${pictureId}.png`;
-    
-    console.log("Uploading", imageFile);
-    const storage = getStorage();
-    const imageRef = ref(storage, imageURL);
-    
-    try {
-        await uploadBytes(imageRef, imageFile);
-    } catch(err) {
-        console.log(err); // log any errors for debugging
-    }
-
-    // Get the URL to this uploaded file so we can reference it from the web
-    const downloadUrlString = await getDownloadURL(imageRef);
-    console.log(downloadUrlString);
-  };
-
-  const handleClear = () => {
+  const handleClear = (event) => {
     setImageFile(null);
     setImageUrl(initialURL);
   };
@@ -57,14 +47,7 @@ return (
                 <img src={imageUrl} className="border border-secondary img-fluid" alt="user avatar preview" />
             </div>
             <div className="row mt-3">
-                <div className="col">
-                    <form onClick={handleImageUpload}>
-                        <button className="btn btn-primary" type="submit">
-                        Submit Picture
-                        </button>
-                    </form>
-                </div>
-                <div className="col">
+                <div className="col d-flex justify-content-center">
                     <form onClick={handleClear}>
                         <button className="btn btn-secondary" type="clear">
                         Clear Picture
