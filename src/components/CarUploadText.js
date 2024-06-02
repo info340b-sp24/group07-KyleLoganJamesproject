@@ -95,8 +95,8 @@ export function CarUploadText(props) {
         event.preventDefault();
         setAlertMessage(null);
         
-        if (!carState || !categoryState || !mghState || !priceState || !luxuryState || !safetyState || !webState || !descState || imageUrl == null) {
-            return setAlertMessage("Make sure all of the information is completely filled! :)");
+        if (!carState || !categoryState || !mghState || !priceState || !luxuryState || !safetyState || !webState || !descState || imageUrl === null || imageUrl.includes("upload-car.png")) {
+            return setAlertMessage("Make sure all of the information is completely filled! and that there is a image uploaded:)");
         }
         
         const newUploadObj = {
