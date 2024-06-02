@@ -1,7 +1,5 @@
 import React from 'react';
 
-// this just displays the directions for uploading a car, can put into other card
-// but i think having it separate is better for organization
 export function CarUploadDirections(){
     return (
         <div>
