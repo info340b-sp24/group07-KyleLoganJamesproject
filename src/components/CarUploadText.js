@@ -4,7 +4,7 @@ import { Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { CarUploadDirections } from './CarUploadDirections';
 
-export function CarUploadText() {
+export function CarUploadText(props) {
     const carTypes = ["Car Category", "Truck", "Sedan", "Sports", "Luxury", "SUV"];
 
     const categoryOptions = carTypes.map((carType, index) => (
@@ -30,6 +30,8 @@ export function CarUploadText() {
     const [webState, setWebState] = useState("");
     const [descState, setDescState] = useState("");
     const [alertMessage, setAlertMessage] = useState(null);
+    
+    const imageUrl = props.imageUrl;
 
     
     const handleCarNameChange = (event) => {
@@ -78,7 +80,6 @@ export function CarUploadText() {
 
         // Returns a function that will "unregister" (turn off) the listener
         const offFunction = onValue(carDataRef, function(snapshot) {
-        const allCarDataObj = snapshot.val();
         
         // Cleanup function for when component is removed
         function cleanup() {
@@ -104,7 +105,7 @@ export function CarUploadText() {
             "description": descState,
             "type": categoryState,
             "link": webState,
-            "image": null,
+            "image": imageUrl,
             "price": priceState,
             "luxury_scale": luxuryState,
             "safety_rating": safetyState,
@@ -178,7 +179,7 @@ export function CarUploadText() {
             <div>
                 <form onSubmit={addCar}>
                     <button className="btn btn-primary" type="submit">
-                        Submit
+                        Submit Directions
                     </button>
                 </form>
             </div>

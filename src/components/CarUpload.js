@@ -12,7 +12,7 @@ export function CarUpload (props) {
             <CarPicture props={props}/>
           </div>
           <div className="col-md-6">
-            <CarUploadText props={props}/>
+          <CarUploadText imageUrl={props.imageUrl}/>
           </div>
         </div>
       </div>
