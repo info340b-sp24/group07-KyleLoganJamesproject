@@ -35,7 +35,6 @@ export function CarPicture(props) {
         setImageUrl(downloadUrlString);
       } catch (error) {
         setError(error.message);
-        console.error("Error uploading image: ", error);
       } finally {
         setLoading(false);
       }
