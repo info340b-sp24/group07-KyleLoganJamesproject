@@ -71,12 +71,10 @@ function FilteredCars(props) {
     let newFilteredCardArrayRemovedUndefined = [];
     for (let outer2dObject in filteredCardArrayWithUndefined) {
         for (let individualCarCard in filteredCardArrayWithUndefined[outer2dObject]) {
-            //push the current car object into the 2d array 
             newFilteredCardArrayRemovedUndefined[outer2dObject] = newFilteredCardArrayRemovedUndefined.push(filteredCardArrayWithUndefined[outer2dObject][individualCarCard]);
         }
     }
     //now it is a 1D array, we need to remove the first element from firebase because it does not have any valuable content.
-    //remove first element that has nothing. 
     newFilteredCardArrayRemovedUndefined.shift(); 
     //now we have all card values we want, we can just push that car card so we have a final filtered car array that is based on user input.
     let eliminateUnrefinedArray = [];
